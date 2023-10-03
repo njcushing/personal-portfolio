@@ -4,7 +4,7 @@ import photo from '@/assets/NiallCushingPhoto.jpg';
 
 const PersonalInformation = () => {
     return (
-        <div className="container">
+        <div className={styles["container"]}>
             <img
                 className={styles["photo"]}
                 src={photo}
