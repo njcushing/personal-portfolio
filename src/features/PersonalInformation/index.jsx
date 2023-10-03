@@ -1,17 +1,14 @@
-import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import styles from './index.module.css';
 
-import ImageBasic from '@/components/ImageBasic/ImageBasic';
-import plant from '@/assets/plant.jpg';
+import photo from '@/assets/NiallCushingPhoto.jpg';
 
 const PersonalInformation = () => {
     return (
-        <div className="PersonalInformation">
+        <div className="container">
             <img
                 className={styles["photo"]}
-                src={plant}
-                alt="Photo of a plant by Liubov Ilchuk on Unsplash"
+                src={photo}
+                alt="Me in front of the Prague skyline"
             ></img>
             <h2 className={styles["name"]}>Niall Cushing</h2>
             <div className={styles["about-me-container"]}>
