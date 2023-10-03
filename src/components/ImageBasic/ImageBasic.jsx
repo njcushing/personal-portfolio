@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ImageBasic.module.css';
 
-const Image = ({
+const ImageBasic = ({
     url,
     alt,
 }) => {
@@ -23,9 +23,9 @@ const Image = ({
     );
 }
 
-Image.propTypes = {
+ImageBasic.propTypes = {
     url: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
 }
 
-export default Image;
+export default ImageBasic;
