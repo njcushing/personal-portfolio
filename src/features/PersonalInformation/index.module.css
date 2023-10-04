@@ -6,7 +6,7 @@
     box-shadow: 0px 4px 5px -0px rgba(0, 0, 0, 0.3);
 
     padding: 0.4rem;
-    margin: 0.4rem 0.2rem;
+    margin: 1.2rem 0.2rem;
 
     animation: 0.5s ease-in-out 0s 1 normal forwards fade-in;
 }
@@ -31,7 +31,7 @@
     max-width: 100%;
     max-height: 100%;
 
-    animation: 0.5s ease-in-out 0.3s 1 normal forwards fade-in;
+    animation: 0.5s ease-in-out 0.25s 1 normal forwards fade-in;
 }
 
 .name {
@@ -43,38 +43,96 @@
     padding: 0rem;
     margin: 0.4rem 0.2rem;
 
-    animation: 0.5s ease-in-out 0.6s 1 normal forwards fade-in;
+    animation: 0.5s ease-in-out 0.5s 1 normal forwards fade-in;
 }
 
-.about-me-container {
+.about-me-container,
+.contact-me-container {
     display: flex;
     flex-direction: column;
 
     opacity: 0%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.4rem;
+
     font-weight: 400;
 
     padding: 0.4rem;
-    margin: 0.2rem 0.12rem;
-
-    animation: 0.5s ease-in-out 0.9s 1 normal forwards fade-in;
+    margin: 1.2rem 0.12rem 0.2rem;
+}
+.about-me-container {
+    animation: 0.5s ease-in-out 0.75s 1 normal forwards fade-in;
+}
+.contact-me-container {
+    animation: 0.5s ease-in-out 1s 1 normal forwards fade-in;
 }
 
-.about-me-title {
+.about-me-title,
+.contact-me-title {
+    align-self: start;
+
     color: rgba(0, 0, 0, 0.96);
+    background-color: rgb(227, 252, 255);
     font-size: 1.28rem;
     text-align: left;
 
+    position: relative;
+    top: -1.5rem;
+    padding: 0rem 0.4rem;
+    margin: 0rem;
+    margin-bottom: -1.5rem;
+}
+
+.about-me-text {
+    color: rgba(0, 0, 0, 0.92);
+    font-size: 0.96rem;
+    font-style: italic;
+    text-align: justify;
+    line-height: 1.32rem;
+
     padding: 0rem;
     margin: 0rem;
 }
 
-.about-me-text {
-    color: rgba(0, 0, 0, 0.9);
-    font-size: 0.96rem;
-    font-style: italic;
-    text-align: justify;
-    line-height: -1rem;
+.contact-me-options {
+    display: grid;
+    grid-template-rows: 2.4rem;
+    grid-template-columns: repeat(auto-fill, 2.4rem);
+    place-content: center;
+    place-items: center;
+    gap: 1.2rem;
 
-    padding: 0rem;
+    list-style: none;
+
+    padding: 0.6rem;
     margin: 0rem;
+}
+
+.contact-me-button {
+    display: flex;
+    place-content: center;
+
+    border: 0.15rem solid transparent;
+    border-radius: 0.2rem;
+    transition: border 0.24s ease-in-out 0s;
+
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.github-icon,
+.linked-in-icon {
+    color: rgba(0, 0, 0, 1);
+
+    transition: transform 0.24s ease-in-out 0s;
+
+    width: 2rem;
+}
+
+.contact-me-button:hover {
+    border-color: rgba(0, 0, 0, 0.5);
+}
+.contact-me-button:hover .github-icon,
+.contact-me-button:hover .linked-in-icon {
+    transform: scale(115%);
 }
