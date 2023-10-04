@@ -46,7 +46,12 @@ const PersonalInformation = () => {
                             aria-label="github"
                         />
                     </li>
-                    <li className={styles["contact-me-button"]}><MaterialSymbolsButton text="email" link="/"/></li>
+                    <li className={styles["contact-me-button"]}>
+                        <MaterialSymbolsButton
+                            text="email"
+                            scale={2.0}
+                        />
+                    </li>
                 </ul>
             </div>
         </div>
