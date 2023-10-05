@@ -14,6 +14,15 @@
     margin: 0rem;
 }
 
+.MaterialSymbolsAnchor ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0rem;
+    margin: 0rem;
+}
+
 .material-symbols-rounded {
     color: rgba(0, 0, 0, 1);
 
@@ -24,6 +33,6 @@
     border-color: rgba(0, 0, 0, 0.5);
 }
 
-.MaterialSymbolsAnchor:hover .material-symbols-rounded {
+.MaterialSymbolsAnchor:hover ul .material-symbols-rounded {
     transform: scale(115%);
 }

@@ -17,12 +17,12 @@ const MaterialSymbolsAnchor = ({
             href={href}
             aria-label={ariaLabel}
         >
-            <li
+            <ul><li
                 className="material-symbols-rounded"
                 style={{
                     fontSize: `${sizeRem * 0.8}rem`,
                 }}
-            >{text}</li>
+            >{text}</li></ul>
         </a>
     )
 };
