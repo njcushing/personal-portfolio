@@ -39,7 +39,7 @@ DeviconsAnchor.propTypes = {
 }
 
 DeviconsAnchor.defaultProps = {
-    href: "",
+    href: null,
     ariaLabel: "",
     sizeRem: 1.0,
 }

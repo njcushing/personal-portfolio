@@ -20,8 +20,6 @@ const MaterialSymbolsAnchor = ({
             <div
                 className="material-symbols-rounded"
                 style={{
-                    textAlign: "center",
-                    textDecoration: "none",
                     fontSize: `${sizeRem * 0.8}rem`,
                 }}
             >{text}</div>
@@ -37,7 +35,7 @@ MaterialSymbolsAnchor.propTypes = {
 }
 
 MaterialSymbolsAnchor.defaultProps = {
-    href: "",
+    href: null,
     ariaLabel: "",
     text: "Button",
     sizeRem: 1.0,

@@ -99,39 +99,10 @@
     flex-wrap: wrap;
     place-content: center;
     place-items: center;
-    gap: 1.2rem;
+    gap: 1.20rem;
 
     list-style: none;
 
     padding: 0.6rem;
     margin: 0rem;
-}
-
-.contact-me-button {
-    display: flex;
-    place-content: center;
-
-    border: 0.15rem solid transparent;
-    border-radius: 0.2rem;
-    transition: border 0.24s ease-in-out 0s;
-
-    width: 2.4rem;
-    height: 2.4rem;
-}
-
-.github-icon,
-.linked-in-icon {
-    color: rgba(0, 0, 0, 1);
-
-    transition: transform 0.24s ease-in-out 0s;
-
-    width: 2rem;
-}
-
-.contact-me-button:hover {
-    border-color: rgba(0, 0, 0, 0.5);
-}
-.contact-me-button:hover .github-icon,
-.contact-me-button:hover .linked-in-icon {
-    transform: scale(115%);
 }
