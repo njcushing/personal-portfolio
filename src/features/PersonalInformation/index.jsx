@@ -1,8 +1,8 @@
 import styles from './index.module.css';
 
 import photo from '@/assets/NiallCushingPhoto.jpg';
-import MaterialSymbolsAnchor from './components/MaterialSymbolsAnchor/MaterialSymbolsAnchor';
-import DeviconsAnchor from './components/DeviconsAnchor/DeviconsAnchor';
+import MaterialSymbolsAnchor from '@/components/MaterialSymbolsAnchor/MaterialSymbolsAnchor';
+import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
 
 const PersonalInformation = () => {
     return (
@@ -32,7 +32,7 @@ const PersonalInformation = () => {
             </div>
             <div className={styles["contact-me-container"]}>
                 <h3 className={styles["contact-me-title"]}>Contact Me</h3>
-                <ul className={styles["contact-me-options"]}>
+                <ul className={styles["contact-me-links"]}>
                     <li><DeviconsAnchor
                         href="https://uk.linkedin.com/in/niall-cushing-19b8ab17a"
                         ariaLabel="linked in"
@@ -47,12 +47,24 @@ const PersonalInformation = () => {
                         alt="github"
                         sizeRem={2.4}
                     /></li>
-                    <li><MaterialSymbolsAnchor
-                        href={null}
-                        ariaLabel="email"
-                        text="email"
-                        sizeRem={2.4}
-                    /></li>
+                </ul>
+                <ul className={styles["contact-me-additional"]}>
+                    <li>
+                        <h4 className={styles["contact-me-additional-item-heading"]}>
+                            Email:
+                        </h4>
+                        <p className={styles["contact-me-additional-item-text"]}>
+                            fakeemail@gmail.com
+                        </p>
+                    </li>
+                    <li>
+                        <h4 className={styles["contact-me-additional-item-heading"]}>
+                            Phone:
+                        </h4>
+                        <p className={styles["contact-me-additional-item-text"]}>
+                            +44 9999 999999
+                        </p>
+                    </li>
                 </ul>
             </div>
         </div>
