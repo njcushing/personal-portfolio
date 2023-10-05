@@ -33,32 +33,26 @@ const PersonalInformation = () => {
             <div className={styles["contact-me-container"]}>
                 <h3 className={styles["contact-me-title"]}>Contact Me</h3>
                 <ul className={styles["contact-me-options"]}>
-                    <li className={styles["contact-me-option"]}>
-                        <DeviconsAnchor
-                            href="https://uk.linkedin.com/in/niall-cushing-19b8ab17a"
-                            ariaLabel="linked in"
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg"
-                            alt="linked in"
-                            sizeRem={2.4}
-                        />
-                    </li>
-                    <li className={styles["contact-me-option"]}>
-                        <DeviconsAnchor
-                            href="https://github.com/njcushing"
-                            ariaLabel="github"
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                            alt="github"
-                            sizeRem={2.4}
-                        />
-                    </li>
-                    <li className={styles["contact-me-option"]}>
-                        <MaterialSymbolsAnchor
-                            href={null}
-                            ariaLabel="email"
-                            text="email"
-                            sizeRem={2.4}
-                        />
-                    </li>
+                    <li><DeviconsAnchor
+                        href="https://uk.linkedin.com/in/niall-cushing-19b8ab17a"
+                        ariaLabel="linked in"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg"
+                        alt="linked in"
+                        sizeRem={2.4}
+                    /></li>
+                    <li><DeviconsAnchor
+                        href="https://github.com/njcushing"
+                        ariaLabel="github"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                        alt="github"
+                        sizeRem={2.4}
+                    /></li>
+                    <li><MaterialSymbolsAnchor
+                        href={null}
+                        ariaLabel="email"
+                        text="email"
+                        sizeRem={2.4}
+                    /></li>
                 </ul>
             </div>
         </div>
