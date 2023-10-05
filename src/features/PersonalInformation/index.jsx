@@ -6,6 +6,7 @@ import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
 
 const PersonalInformation = () => {
     return (
+        <div className={styles["wrapper"]}>
         <div className={styles["container"]}>
             <img
                 className={styles["photo"]}
@@ -70,7 +71,8 @@ const PersonalInformation = () => {
                 </div>
             </div>
         </div>
-    )
+        </div>
+    );
 };
 
 export default PersonalInformation;
