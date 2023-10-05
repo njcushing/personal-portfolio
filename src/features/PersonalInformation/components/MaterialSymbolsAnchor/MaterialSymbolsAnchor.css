@@ -1,0 +1,28 @@
+.MaterialSymbolsAnchor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    border: 0.15rem solid transparent;
+    border-radius: 0.2rem;
+
+    transition: border 0.24s ease-in-out 0s;
+
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.material-symbols-rounded {
+    color: rgba(0, 0, 0, 1);
+    
+    transition: transform 0.24s ease-in-out 0s;
+}
+
+.MaterialSymbolsAnchor:hover {
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.MaterialSymbolsAnchor:hover .material-symbols-rounded {
+    transform: scale(115%);
+}

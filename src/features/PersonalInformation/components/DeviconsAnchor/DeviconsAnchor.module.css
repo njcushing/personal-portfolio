@@ -1,0 +1,26 @@
+.DeviconsAnchor {
+    display: flex;
+    place-content: center;
+
+    background-color: transparent;
+    border: 0.15rem solid transparent;
+    border-radius: 0.2rem;
+    
+    transition: border 0.24s ease-in-out 0s;
+
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.devicon {
+    color: rgba(0, 0, 0, 1);
+
+    transition: transform 0.24s ease-in-out 0s;
+}
+
+.DeviconsAnchor:hover {
+    border-color: rgba(0, 0, 0, 0.5);
+}
+.DeviconsAnchor:hover .devicon {
+    transform: scale(115%);
+}
