@@ -5,6 +5,11 @@
     max-width: 1000px;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .title {
     font-size: 2.2rem;
     text-align: center;
@@ -12,4 +17,17 @@
 
 .project-category-title {
     font-size: 1.4rem;
+    text-align: center;
+}
+
+.project-category-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    row-gap: 1.0rem;
+    column-gap: 1.0rem;
+    justify-items: center;
+
+    width: auto;
+
+    border: 1px solid #000;
 }
