@@ -31,10 +31,12 @@
 
 .name {
     font-size: 2.4rem;
+    font-weight: 600;
 }
 
 .personal-portfolio-text {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    font-weight: 400;
 }
 
 .navigation-buttons {
