@@ -1,10 +1,46 @@
 .landing-page-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: minmax(100vh, auto);
+    place-items: center;
     gap: 0.8rem;
 }
 
-.test {
-    opacity: 0%;
+.navigation-content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 1fr auto auto 1fr;
+
+    width: 100%;
+    height: 100%;
+}
+
+.page-titles {
+    align-self: center;
+}
+
+.name,
+.personal-portfolio-text {
+    font-family: Spectral;
+    word-break: keep-all;
+    text-align: center;
+
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.name {
+    font-size: 2.4rem;
+}
+
+.personal-portfolio-text {
+    font-size: 1.1rem;
+}
+
+.navigation-buttons {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
 }

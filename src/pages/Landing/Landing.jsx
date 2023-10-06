@@ -10,7 +10,13 @@ const Landing = () => {
     return (
         <BrowserRouter>
             <div className={styles["landing-page-content"]}>
-                <Navigation />
+                <div className={styles["navigation-content"]}>
+                    <div className={styles["page-titles"]}>
+                        <h1 className={styles["name"]}>Niall Cushing</h1>
+                        <h3 className={styles["personal-portfolio-text"]}>Personal Portfolio</h3>
+                    </div>
+                    <div className={styles["navigation-buttons"]}><Navigation /></div>
+                </div>
                 <PersonalInformation />
             </div>
         </BrowserRouter>
