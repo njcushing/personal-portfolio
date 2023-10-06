@@ -6,9 +6,9 @@ import Landing from '@/pages/Landing/Landing';
 
 const App = () => {
     return (
-        <>
+        <div className={styles["landing-page-container"]}>
             <Landing />
-        </>
+        </div>
     )
 };
 
