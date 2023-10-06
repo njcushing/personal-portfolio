@@ -5,6 +5,7 @@ import styles from './Landing.module.css';
 
 import Navigation from '@/features/Navigation';
 import PersonalInformation from '@/features/PersonalInformation';
+import ProjectList from '@/features/ProjectList';
 
 const Landing = () => {
     return (
@@ -13,11 +14,12 @@ const Landing = () => {
                 <div className={styles["navigation-content"]}>
                     <div className={styles["page-titles"]}>
                         <h1 className={styles["name"]}>Niall Cushing</h1>
-                        <h3 className={styles["personal-portfolio-text"]}>Personal Portfolio</h3>
+                        <h2 className={styles["personal-portfolio-text"]}>Personal Portfolio</h2>
                     </div>
                     <div className={styles["navigation-buttons"]}><Navigation /></div>
                 </div>
                 <PersonalInformation />
+                <ProjectList />
             </div>
         </BrowserRouter>
     )
