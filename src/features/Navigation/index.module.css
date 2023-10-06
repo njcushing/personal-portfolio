@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+}
+
+.nav-buttons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    list-style: none;
+
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
