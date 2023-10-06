@@ -5,6 +5,7 @@
     background-color: transparent;
     border: 0.15rem solid transparent;
     border-radius: 0.2rem;
+    outline: none;
     
     transition: border 0.24s ease-in-out 0s;
 
@@ -18,9 +19,11 @@
     transition: transform 0.24s ease-in-out 0s;
 }
 
-.DeviconsAnchor:hover {
+.DeviconsAnchor:hover,
+.DeviconsAnchor:focus {
     border-color: rgba(0, 0, 0, 0.5);
 }
-.DeviconsAnchor:hover .devicon {
+.DeviconsAnchor:hover .devicon,
+.DeviconsAnchor:focus .devicon {
     transform: scale(115%);
 }
