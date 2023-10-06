@@ -11,6 +11,9 @@
 
 .wrapper {
     container-type: inline-size;
+
+    width: 100%;
+    max-width: 1000px;
 }
 
 .container {
@@ -21,8 +24,7 @@
     background-color: rgb(227, 252, 255);
     box-shadow: 0px 4px 5px -0px rgba(0, 0, 0, 0.3);
 
-    width: auto;
-    padding: 0.4rem;
+    padding: 0.5rem;
 
     animation: 0.5s ease-in-out 0s 1 normal forwards fade-in;
 }
@@ -156,11 +158,7 @@
 @container (width > 600px) {
     .container {
         grid-template-rows: auto 1fr auto;
-        grid-template-columns: 50% 50%;
-
-        max-width: 1000px;
-        padding: 0.4rem;
-        margin: 1.2rem 0.2rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .photo {

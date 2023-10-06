@@ -4,6 +4,7 @@ import NavigationButton from './components/NavigationButton/NavigationButton';
 
 const Navigation = () => {
     return (
+        <div className={styles["wrapper"]}>
         <nav className={styles["container"]}>
             <ul className={styles["nav-buttons-list"]}>
                 <li className={styles["nav-button"]}><NavigationButton
@@ -12,9 +13,15 @@ const Navigation = () => {
                 /></li>
                 <li className={styles["nav-button"]}><NavigationButton
                     text="My Projects"
+                    onClickHandler={() => {}}
+                /></li>
+                <li className={styles["nav-button"]}><NavigationButton
+                    text="Contact Me"
+                    onClickHandler={() => {}}
                 /></li>
             </ul>
         </nav>
+        </div>
     );
 };
 

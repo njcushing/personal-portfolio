@@ -5,6 +5,7 @@
     width: 100%;
     max-width: 10rem;
     height: 2.30rem;
+    padding: 0.2rem;
 }
 
 .NavigationButton {
@@ -12,7 +13,9 @@
 
     color: rgba(255, 255, 255, 1.0);
     font-family: Nunito;
-    border: 0.1rem solid rgba(255, 255, 255, 1.0);
+    text-align: center;
+    text-decoration: none;
+    border: 0.1rem solid rgba(255, 255, 255, 0.8);
     border-radius: 0.4rem;
 
     width: 100%;
@@ -28,23 +31,4 @@
 }
 .NavigationButton:focus {
     outline: 2px solid white;
-}
-
-.NavigationButton:disabled {
-    color: #444444;
-    background-color: #afafaf;
-}
-
-.NavigationButton:disabled:hover {
-    color: #444444;
-    background-color: #afafaf;
-}
-
-.NavigationButton:disabled:active {
-    color: #444444;
-    background-color: #afafaf;
-}
-
-.NavigationButton[sel=true] {
-    font-weight: bold;
 }
