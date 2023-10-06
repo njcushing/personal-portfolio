@@ -1,6 +1,7 @@
 import styles from './index.module.css'
 
 import NavigationButton from './components/NavigationButton/NavigationButton';
+import Separator from './components/Separator/Separator';
 
 const Navigation = () => {
     return (
@@ -11,10 +12,12 @@ const Navigation = () => {
                     text="About Me"
                     onClickHandler={() => {}}
                 /></li>
+                <Separator height="1px" />
                 <li className={styles["nav-button"]}><NavigationButton
                     text="My Projects"
                     onClickHandler={() => {}}
                 /></li>
+                <Separator height="1px" />
                 <li className={styles["nav-button"]}><NavigationButton
                     text="Contact Me"
                     onClickHandler={() => {}}
