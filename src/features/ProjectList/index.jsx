@@ -1,5 +1,6 @@
 import styles from './index.module.css';
 
+import photo from '@/assets/NiallCushingPhoto.jpg';
 import ProjectPanel from './components/ProjectPanel/ProjectPanel';
 
 const ProjectList = () => {

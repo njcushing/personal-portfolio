@@ -15,11 +15,11 @@ const ProjectPanel = ({
     return (
         <div className={styles["wrapper"]}>
         <div className={styles["container"]}>
-            <img
+            <div className={styles["image-container"]}><img
                 className={styles["image"]}
                 src={imgSrc}
                 alt={imgAlt}
-            ></img>
+            ></img></div>
             <h4 className={styles["name"]}>{projectName}</h4>
             <ul className={styles["description-container"]}>
                 {projectDesc.map((p, i) =>
