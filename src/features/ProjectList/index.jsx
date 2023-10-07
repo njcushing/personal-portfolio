@@ -15,20 +15,19 @@ const findGridColumns = (grid) => {
     }
 };
 
+const reduceProjects = (numberToDisplay) => {
+    const trimmedProjectArray = [];
+    for (let i = 0; i < Math.min(projects.length, numberToDisplay); i++) {
+        trimmedProjectArray.push(projects[i]);
+    }
+    return trimmedProjectArray;
+};
+
 const projects = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 const ProjectList = () => {
     const [rowCount, setRowCount] = useState(2);
     const [columnCount, setColumnCount] = useState(0);
-
-    const populateList = () => {
-        const projectCountToDisplay = (rowCount * columnCount);
-        const trimmedProjectArray = [];
-        for (let i = 0; i < Math.min(projects.length, projectCountToDisplay); i++) {
-            trimmedProjectArray.push(projects[i]);
-        }
-        return trimmedProjectArray;
-    }
 
     const projectListRef = useRef(null);
     const projectList = useMemo(() => {
@@ -37,7 +36,7 @@ const ProjectList = () => {
                 className={styles["project-category-projects"]}
                 ref={projectListRef}
             >
-                {populateList().map((project, i) => <ProjectPanel key={i} />)}
+                {reduceProjects(rowCount * columnCount).map((project, i) => <ProjectPanel key={i} />)}
             </div>
         );
     }, [rowCount, columnCount]);
