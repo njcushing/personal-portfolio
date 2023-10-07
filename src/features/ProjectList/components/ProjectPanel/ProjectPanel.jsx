@@ -9,8 +9,8 @@ const ProjectPanel = ({
     imgAlt,
     projectName,
     projectDesc,
-    pageLink,
-    githubLink,
+    pageUrl,
+    githubUrl,
 }) => {
     return (
         <div className={styles["wrapper"]}>
@@ -30,9 +30,15 @@ const ProjectPanel = ({
                 )}
             </ul>
             <ul className={styles["link-buttons"]}>
+                <li><MaterialSymbolsAnchor
+                    href={pageUrl}
+                    ariaLabel="The project's page"
+                    text="open_in_new"
+                    sizeRem={2.4}
+                /></li>
                 <li><DeviconsAnchor
-                    href="https://github.com/njcushing"
-                    ariaLabel="github"
+                    href={githubUrl}
+                    ariaLabel="The project on github"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                     alt="github"
                     sizeRem={2.4}
@@ -48,13 +54,17 @@ ProjectPanel.propTypes = {
     imgAlt: PropTypes.string,
     projectName: PropTypes.string,
     projectDesc: PropTypes.arrayOf(PropTypes.string),
+    pageUrl: PropTypes.string,
+    githubUrl: PropTypes.string,
 }
 
 ProjectPanel.defaultProps = {
     imgSrc: "",
     imgAlt: "",
     projectName: "Project Name",
-    projectDesc: [],
+    projectDesc: ["Project description"],
+    pageUrl: null,
+    githubUrl: null,
 }
 
 export default ProjectPanel;
