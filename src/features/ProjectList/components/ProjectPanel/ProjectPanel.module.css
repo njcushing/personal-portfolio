@@ -8,7 +8,7 @@
 
 .container {
     display: grid;
-    grid-template-rows: 40% auto;
+    grid-template-rows: 40% auto 1fr auto;
     gap: 0.4rem;
 
     background-color: #fff;
@@ -36,5 +36,34 @@
 
     width: calc(100% - (2 * 0.6rem));
     padding: 0rem;
+    margin: 0rem 0.6rem;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    padding: 0rem;
+    margin: 0rem 0.6rem;
+}
+
+.description-paragraph {
+    color: rgba(0, 0, 0, 0.96);
+    font-size: 0.9rem;
+
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.link-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 0.15rem;
+
+    list-style: none;
+
+    padding: 0.2rem 0rem;
     margin: 0rem 0.6rem;
 }
