@@ -1,10 +1,11 @@
+import { forwardRef } from 'react';
 import styles from './index.module.css';
 
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
 
-const ContactInformation = () => {
+const ContactInformation = forwardRef(function ContactInformation(props, ref) {
     return (
-        <div className={styles["wrapper"]}>
+        <div className={styles["wrapper"]} ref={ref}>
         <nav className={styles["container"]}>
             <div className={styles["contact-me-container"]}>
                 <h3 className={styles["contact-me-title"]}>Contact Me</h3>
@@ -48,6 +49,6 @@ const ContactInformation = () => {
         </nav>
         </div>
     );
-};
+});
 
 export default ContactInformation;

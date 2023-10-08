@@ -1,11 +1,12 @@
+import { forwardRef } from 'react';
 import styles from './index.module.css';
 
 import photo from '@/assets/NiallCushingPhoto.jpg';
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
 
-const PersonalInformation = () => {
+const PersonalInformation = forwardRef(function PersonalInformation(props, ref) {
     return (
-        <div className={styles["wrapper"]}>
+        <div className={styles["wrapper"]} ref={ref}>
         <div className={styles["container"]}>
             <img
                 className={styles["photo"]}
@@ -49,6 +50,6 @@ const PersonalInformation = () => {
         </div>
         </div>
     );
-};
+});
 
 export default PersonalInformation;

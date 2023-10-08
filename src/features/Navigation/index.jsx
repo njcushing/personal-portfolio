@@ -1,31 +1,48 @@
+import PropTypes from 'prop-types';
 import styles from './index.module.css'
 
 import NavigationButton from './components/NavigationButton/NavigationButton';
 import Separator from './components/Separator/Separator';
 
-const Navigation = () => {
+const Navigation = ({
+    personalInformationOnClickHandler,
+    projectsOnClickHandler,
+    contactInformationOnClickHandler,
+}) => {
     return (
         <div className={styles["wrapper"]}>
         <nav className={styles["container"]}>
             <ul className={styles["nav-buttons-list"]}>
                 <li className={styles["nav-button"]}><NavigationButton
                     text="About Me"
-                    onClickHandler={() => {}}
+                    onClickHandler={personalInformationOnClickHandler}
                 /></li>
                 <Separator height="1px" />
                 <li className={styles["nav-button"]}><NavigationButton
                     text="My Projects"
-                    onClickHandler={() => {}}
+                    onClickHandler={projectsOnClickHandler}
                 /></li>
                 <Separator height="1px" />
                 <li className={styles["nav-button"]}><NavigationButton
                     text="Contact Me"
-                    onClickHandler={() => {}}
+                    onClickHandler={contactInformationOnClickHandler}
                 /></li>
             </ul>
         </nav>
         </div>
     );
 };
+
+Navigation.propTypes = {
+    personalInformationOnClickHandler: PropTypes.func,
+    projectsOnClickHandler: PropTypes.func,
+    contactInformationOnClickHandler: PropTypes.func,
+}
+
+Navigation.defaultProps = {
+    personalInformationOnClickHandler: null,
+    projectsOnClickHandler: null,
+    contactInformationOnClickHandler: null,
+}
 
 export default Navigation;

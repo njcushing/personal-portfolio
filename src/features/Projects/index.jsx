@@ -1,10 +1,8 @@
-import { useState, useEffect, useRef, useMemo } from 'react';
-import PropTypes from 'prop-types';
+import { forwardRef } from 'react';
 import styles from './index.module.css';
 
 import ProjectPanelParams from './components/ProjectPanel/ProjectPanelParams';
 
-import photo from '@/assets/NiallCushingPhoto.jpg';
 import ProjectList from './components/ProjectList/ProjectList';
 
 const params = () => {  return { ...ProjectPanelParams.defaultProps, }; }
@@ -22,9 +20,9 @@ const theOdinProjects = [
     { ...params(), },
 ];
 
-const Projects = () => {
+const Projects = forwardRef(function Projects(props, ref) {
     return (
-        <div className={styles["wrapper"]}>
+        <div className={styles["wrapper"]} ref={ref}>
         <div className={styles["container"]}>
             <h2 className={styles["title"]}>My Projects</h2>
             <ProjectList
@@ -34,6 +32,6 @@ const Projects = () => {
         </div>
         </div>
     );
-};
+});
 
 export default Projects;
