@@ -7,17 +7,19 @@ import ProjectPanelParams from './components/ProjectPanel/ProjectPanelParams';
 import photo from '@/assets/NiallCushingPhoto.jpg';
 import ProjectList from './components/ProjectList/ProjectList';
 
+const params = () => {  return { ...ProjectPanelParams.defaultProps, }; }
+
 const theOdinProjects = [
-    { ...ProjectPanelParams.defaultProps, },
-    { ...ProjectPanelParams.defaultProps, },
-    { ...ProjectPanelParams.defaultProps, },
-    { ...ProjectPanelParams.defaultProps, },
-    { ...ProjectPanelParams.defaultProps, },
-    { ...ProjectPanelParams.defaultProps, },
-    { ...ProjectPanelParams.defaultProps, },
-    { ...ProjectPanelParams.defaultProps, },
-    { ...ProjectPanelParams.defaultProps, },
-    { ...ProjectPanelParams.defaultProps, },
+    { ...params(), },
+    { ...params(), },
+    { ...params(), },
+    { ...params(), },
+    { ...params(), },
+    { ...params(), },
+    { ...params(), },
+    { ...params(), },
+    { ...params(), },
+    { ...params(), },
 ];
 
 const Projects = () => {
