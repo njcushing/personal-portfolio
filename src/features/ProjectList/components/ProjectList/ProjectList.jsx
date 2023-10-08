@@ -51,6 +51,16 @@ const ProjectList = ({
         );
     }, [reduceProjects]);
 
+    const showMoreButton = useMemo(() => {
+        if ((rowCount * columnCount) >= projects.length) return null;
+        return(
+            <button
+                className={styles["show-more-button"]}
+                onClick={() => { setRowCount(rowCount + 1); }}
+            >Show More...</button>
+        );
+    }, [projects, rowCount, columnCount]);
+
     useEffect(() => {
         const numberOfColumns = findGridColumns(projectListRef.current);
         if (numberOfColumns === null) return;
@@ -71,6 +81,7 @@ const ProjectList = ({
         <>
         <h3 className={styles["project-category-title"]}>{projectCategoryTitle}</h3>
         {projectList}
+        {showMoreButton}
         </>
     );
 };
