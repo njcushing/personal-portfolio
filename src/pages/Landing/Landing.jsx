@@ -6,6 +6,7 @@ import styles from './Landing.module.css';
 import Navigation from '@/features/Navigation';
 import PersonalInformation from '@/features/PersonalInformation';
 import ProjectList from '@/features/ProjectList';
+import ContactInformation from '@/features/ContactInformation';
 
 const Landing = () => {
     return (
@@ -20,6 +21,7 @@ const Landing = () => {
                 </div>
                 <PersonalInformation />
                 <ProjectList />
+                <ContactInformation />
             </div>
         </BrowserRouter>
     )
