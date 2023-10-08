@@ -32,14 +32,30 @@
 .show-more-button {
     place-self: center;
 
+    color: rgba(255, 255, 255, 0.9);
     font-family: Nunito;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 
+    background-color: transparent;
+    border: none;
     border-radius: 9999px;
+    outline: 2px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0px 4px 5px -0px rgba(0, 0, 0, 0.3);
 
     width: 100%;
     max-width: 20rem;
     height: 2rem;
     margin-top: 0.4rem;
+
+    transition-property: transform, color, outline;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.show-more-button:hover,
+.show-more-button:focus {
+    transform: scale(104%);
+    color: rgba(255, 255, 255, 1.0);
+    outline: 3px solid rgba(255, 255, 255, 1.0);
 }
