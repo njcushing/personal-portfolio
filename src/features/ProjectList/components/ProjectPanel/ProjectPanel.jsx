@@ -1,28 +1,25 @@
 import PropTypes from 'prop-types';
 import styles from './ProjectPanel.module.css';
 
+import ProjectPanelParams from './ProjectPanelParams';
+
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
 import MaterialSymbolsAnchor from '@/components/MaterialSymbolsAnchor/MaterialSymbolsAnchor';
 
 const ProjectPanel = ({
-    imgSrc,
-    imgAlt,
-    projectName,
-    projectDesc,
-    pageUrl,
-    githubUrl,
+    params,
 }) => {
     return (
         <div className={styles["wrapper"]}>
         <div className={styles["container"]}>
             <div className={styles["image-container"]}><img
                 className={styles["image"]}
-                src={imgSrc}
-                alt={imgAlt}
+                src={params.imgSrc}
+                alt={params.imgAlt}
             ></img></div>
-            <h4 className={styles["name"]}>{projectName}</h4>
+            <h4 className={styles["name"]}>{params.projectName}</h4>
             <ul className={styles["description-container"]}>
-                {projectDesc.map((p, i) =>
+                {params.projectDesc.map((p, i) =>
                     <p
                         className={styles["description-paragraph"]}
                         key={i}
@@ -31,13 +28,13 @@ const ProjectPanel = ({
             </ul>
             <ul className={styles["link-buttons"]}>
                 <li><MaterialSymbolsAnchor
-                    href={pageUrl}
+                    href={params.pageUrl}
                     ariaLabel="The project's page"
                     text="open_in_new"
                     sizeRem={2.4}
                 /></li>
                 <li><DeviconsAnchor
-                    href={githubUrl}
+                    href={params.githubUrl}
                     ariaLabel="The project on github"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                     alt="github"
@@ -50,21 +47,11 @@ const ProjectPanel = ({
 };
 
 ProjectPanel.propTypes = {
-    imgSrc: PropTypes.string,
-    imgAlt: PropTypes.string,
-    projectName: PropTypes.string,
-    projectDesc: PropTypes.arrayOf(PropTypes.string),
-    pageUrl: PropTypes.string,
-    githubUrl: PropTypes.string,
+    params: PropTypes.shape({ ...ProjectPanelParams.propTypes, }),
 }
 
 ProjectPanel.defaultProps = {
-    imgSrc: "",
-    imgAlt: "",
-    projectName: "Project Name",
-    projectDesc: ["Project description"],
-    pageUrl: null,
-    githubUrl: null,
+    params: { ...ProjectPanelParams.defaultProps, },
 }
 
 export default ProjectPanel;
