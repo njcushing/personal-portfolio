@@ -78,11 +78,11 @@ const ProjectList = ({
     }, [columnCount]);
 
     return (
-        <>
-        <h3 className={styles["project-category-title"]}>{projectCategoryTitle}</h3>
-        {projectList}
-        {showMoreButton}
-        </>
+        <div className={styles["container"]}>
+            <h3 className={styles["project-category-title"]}>{projectCategoryTitle}</h3>
+            {projectList}
+            {showMoreButton}
+        </div>
     );
 };
 
