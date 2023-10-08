@@ -2,9 +2,9 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProjectList.module.css';
 
-import ProjectPanelParams from './../ProjectPanel/ProjectPanelParams';
+import ProjectPanelParams from '../ProjectPanel/ProjectPanelParams';
 
-import ProjectPanel from './../ProjectPanel/ProjectPanel';
+import ProjectPanel from '../ProjectPanel/ProjectPanel';
 
 const findGridColumns = (grid) => {
     try {

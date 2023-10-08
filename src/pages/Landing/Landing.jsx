@@ -5,7 +5,7 @@ import styles from './Landing.module.css';
 
 import Navigation from '@/features/Navigation';
 import PersonalInformation from '@/features/PersonalInformation';
-import ProjectList from '@/features/ProjectList';
+import Projects from '@/features/Projects';
 import ContactInformation from '@/features/ContactInformation';
 
 const Landing = () => {
@@ -20,7 +20,7 @@ const Landing = () => {
                     <div className={styles["navigation-buttons"]}><Navigation /></div>
                 </div>
                 <PersonalInformation />
-                <ProjectList />
+                <Projects />
                 <ContactInformation />
             </div>
         </BrowserRouter>
