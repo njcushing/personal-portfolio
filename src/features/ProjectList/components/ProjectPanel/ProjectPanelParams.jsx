@@ -3,19 +3,19 @@ import PropTypes from "prop-types";
 let ProjectPanelParams = {};
 
 ProjectPanelParams.propTypes = {
+    name: PropTypes.string,
+    desc: PropTypes.arrayOf(PropTypes.string),
     imgSrc: PropTypes.string,
     imgAlt: PropTypes.string,
-    projectName: PropTypes.string,
-    projectDesc: PropTypes.arrayOf(PropTypes.string),
     pageUrl: PropTypes.string,
     githubUrl: PropTypes.string,
 };
 
 ProjectPanelParams.defaultProps = {
+    name: "Project Name",
+    desc: ["Project description"],
     imgSrc: "",
     imgAlt: "",
-    projectName: "Project Name",
-    projectDesc: ["Project description"],
     pageUrl: null,
     githubUrl: null,
 };
