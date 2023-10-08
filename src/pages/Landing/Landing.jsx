@@ -14,7 +14,7 @@ const Landing = () => {
     const contactInformationWrapperRef = useRef(null);
 
     const navButtonClicked = (sectionName) => {
-        const scrollBorderBuffer = 20; /* Given value translates to pixels */
+        const scrollBorderBuffer = 14; /* Given value translates to pixels */
         let ref;
         switch (sectionName) {
             case "PersonalInformation": ref = personalInformationWrapperRef.current; break;

@@ -29,6 +29,11 @@
     -webkit-text-size-adjust: 100%;
 }
 
+body {
+    padding: 0rem;
+    margin: 0rem;
+}
+
 .no-select {
     -webkit-touch-callout: none;    /* iOS Safari */
     -webkit-user-select: none;      /* Safari */
