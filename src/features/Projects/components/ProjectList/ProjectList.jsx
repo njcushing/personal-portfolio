@@ -24,6 +24,8 @@ const ProjectList = ({
     const [rowCount, setRowCount] = useState(2);
     const [columnCount, setColumnCount] = useState(0);
 
+    const wrapperRef = useRef(null);
+
     const reduceProjects = useCallback(() => {
         const trimmedProjectArray = [];
         for (let i = 0; i < Math.min(projects.length, (rowCount * columnCount)); i++) {
@@ -31,6 +33,18 @@ const ProjectList = ({
         }
         return trimmedProjectArray;
     }, [projects, rowCount, columnCount]);
+
+    useEffect(() => {
+        const eventListener = () => {
+            const viewportHeight = window.innerHeight;
+            const elementYPosRelative = wrapperRef.current.getBoundingClientRect().y;
+            if (elementYPosRelative < viewportHeight) {
+                wrapperRef.current.setAttribute("animate", "true");
+            }
+        };
+        window.addEventListener("scroll", eventListener);
+        return () => window.removeEventListener("scroll", eventListener);
+    }, [wrapperRef]);
 
     const projectListRef = useRef(null);
     const projectList = useMemo(() => {
@@ -82,10 +96,12 @@ const ProjectList = ({
     }, [columnCount]);
 
     return (
+        <div className={styles["wrapper"]} ref={wrapperRef}>
         <div className={styles["container"]}>
             <h3 className={styles["project-category-title"]}>{projectCategoryTitle}</h3>
             {projectList}
             {showMoreButton}
+        </div>
         </div>
     );
 };

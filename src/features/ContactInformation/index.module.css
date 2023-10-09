@@ -8,6 +8,9 @@
         transform: translateY(0rem);
     }
 }
+.wrapper[animate="true"] .container {
+    animation: 0.5s ease-in-out 0s 1 normal forwards fade-in;
+}
 
 .wrapper {
     container-type: inline-size;
@@ -25,8 +28,6 @@
     box-shadow: 0px 4px 5px -0px rgba(0, 0, 0, 0.3);
 
     padding: 0.5rem;
-
-    animation: 0.5s ease-in-out 0s 1 normal forwards fade-in;
 }
 
 .contact-me-container {

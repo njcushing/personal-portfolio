@@ -8,6 +8,21 @@
         transform: translateY(0rem);
     }
 }
+.wrapper[animate="true"] .container {
+    animation: 0.5s ease-in-out 0.15s 1 normal forwards fade-in;
+}
+.wrapper[animate="true"] .photo {
+    animation: 0.5s ease-in-out 0.4s 1 normal forwards fade-in;
+}
+.wrapper[animate="true"] .name {
+    animation: 0.5s ease-in-out 0.65s 1 normal forwards fade-in;
+}
+.wrapper[animate="true"] .personal-page-links {
+    animation: 0.5s ease-in-out 0.9s 1 normal forwards fade-in;
+}
+.wrapper[animate="true"] .about-me-container {
+    animation: 0.5s ease-in-out 1.15s 1 normal forwards fade-in;
+}
 
 .wrapper {
     container-type: inline-size;
@@ -21,12 +36,11 @@
     grid-template-rows: auto;
     grid-template-columns: 1fr;
 
+    opacity: 0%;
     background-color: rgb(227, 252, 255);
     box-shadow: 0px 4px 5px -0px rgba(0, 0, 0, 0.3);
 
     padding: 0.5rem;
-
-    animation: 0.5s ease-in-out 0s 1 normal forwards fade-in;
 }
 
 .photo {
@@ -38,8 +52,6 @@
     width: 100%;
     max-width: 460px;
     max-height: 100%;
-
-    animation: 0.5s ease-in-out 0.25s 1 normal forwards fade-in;
 }
 
 .name {
@@ -50,8 +62,6 @@
 
     padding: 0rem;
     margin: 0.4rem 0.2rem 0.2rem;
-
-    animation: 0.5s ease-in-out 0.5s 1 normal forwards fade-in;
 }
 
 .personal-page-links {
@@ -65,8 +75,6 @@
 
     padding: 0rem;
     margin: 0.2rem 0.12rem;
-
-    animation: 0.5s ease-in-out 0.75s 1 normal forwards fade-in;
 }
 
 .about-me-container {
@@ -80,8 +88,6 @@
 
     padding: 0.4rem;
     margin: 1.2rem 0.12rem 0.2rem;
-
-    animation: 0.5s ease-in-out 1s 1 normal forwards fade-in;
 }
 
 .about-me-title {

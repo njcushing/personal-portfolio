@@ -1,11 +1,23 @@
-import { forwardRef } from 'react';
+import { useEffect, forwardRef } from 'react';
 import styles from './index.module.css';
 
 import photo from '@/assets/NiallCushingPhoto.jpg';
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
 
 const PersonalInformation = forwardRef(function PersonalInformation(props, ref) {
-    return (
+    useEffect(() => {
+        const eventListener = () => {
+            const viewportHeight = window.innerHeight;
+            const elementYPosRelative = ref.current.getBoundingClientRect().y;
+            if (elementYPosRelative < viewportHeight) {
+                ref.current.setAttribute("animate", "true");
+            }
+        };
+        window.addEventListener("scroll", eventListener);
+        return () => window.removeEventListener("scroll", eventListener);
+    }, [ref]);
+
+    const e = (
         <div className={styles["wrapper"]} ref={ref}>
         <div className={styles["container"]}>
             <img
@@ -50,6 +62,8 @@ const PersonalInformation = forwardRef(function PersonalInformation(props, ref) 
         </div>
         </div>
     );
+
+    return e;
 });
 
 export default PersonalInformation;

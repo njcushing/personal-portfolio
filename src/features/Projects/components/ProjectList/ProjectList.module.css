@@ -8,6 +8,9 @@
         transform: translateY(0rem);
     }
 }
+.wrapper[animate="true"] .project-category-projects > * {
+    animation: 0.3s ease-in-out 0.15s 1 normal forwards fade-in;
+}
 
 .wrapper {
     container-type: inline-size;
@@ -41,8 +44,7 @@
 }
 
 .project-category-projects > * {
-    animation: 0.3s ease-in-out 0s 1 normal forwards fade-in;
-
+    opacity: 0%;
 }
 
 .show-more-button {
