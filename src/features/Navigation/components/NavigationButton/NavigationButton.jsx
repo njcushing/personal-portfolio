@@ -12,7 +12,11 @@ const NavigationButton = ({
             <Link
                 to={link}
                 className={styles["NavigationButton"]}
-                onClick={onClickHandler}
+                onClick={(e) => {
+                    onClickHandler(e);
+                    e.target.blur();
+                    e.preventDefault();
+                }}
             >{text}
             </Link>
         </div>

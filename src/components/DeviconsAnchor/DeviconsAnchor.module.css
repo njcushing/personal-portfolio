@@ -19,11 +19,18 @@
     transition: transform 0.24s ease-in-out 0s;
 }
 
-.DeviconsAnchor:hover,
+@media (hover: hover) {
+    .DeviconsAnchor:hover {
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+    .DeviconsAnchor:hover .devicon {
+        transform: scale(115%);
+    }
+}
+
 .DeviconsAnchor:focus {
     border-color: rgba(0, 0, 0, 0.5);
 }
-.DeviconsAnchor:hover .devicon,
 .DeviconsAnchor:focus .devicon {
     transform: scale(115%);
 }

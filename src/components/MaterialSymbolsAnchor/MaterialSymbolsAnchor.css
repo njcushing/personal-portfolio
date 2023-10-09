@@ -6,6 +6,7 @@
     background-color: transparent;
     border: 0.15rem solid transparent;
     border-radius: 0.2rem;
+    outline: none;
     text-decoration: none;
 
     transition: border 0.24s ease-in-out 0s;
@@ -38,10 +39,18 @@
                                            supported by Chrome, Edge, Opera and Firefox */
 }
 
-.MaterialSymbolsAnchor:hover {
-    border-color: rgba(0, 0, 0, 0.5);
+@media (hover: hover) {
+    .MaterialSymbolsAnchor:hover {
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+    .MaterialSymbolsAnchor:hover ul .material-symbols-rounded {
+        transform: scale(115%);
+    }
 }
 
-.MaterialSymbolsAnchor:hover ul .material-symbols-rounded {
-    transform: scale(115%);
+.MaterialSymbolsAnchor:focus {
+    border-color: rgba(0, 0, 0, 0.5);
 }
+.MaterialSymbolsAnchor:focus ul .material-symbols-rounded {
+    transform: scale(115%);
+}   

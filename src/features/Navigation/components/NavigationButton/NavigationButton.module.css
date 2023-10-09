@@ -24,11 +24,14 @@
     transition: transform 0.25s ease-in-out 0s;
 }
 
-.NavigationButton:hover,
+@media (hover: hover) {
+    .NavigationButton:hover {
+        transform: scale(107%);
+        outline: 1px solid white;
+    }
+}
+
 .NavigationButton:focus {
     transform: scale(107%);
-    outline: 1px solid white;
-}
-.NavigationButton:focus {
     outline: 2px solid white;
 }

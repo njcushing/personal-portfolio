@@ -69,7 +69,16 @@
     transition-delay: 0s;
 }
 
-.show-more-button:hover,
+
+
+@media (hover: hover) {
+    .show-more-button:hover {
+        transform: scale(104%);
+        color: rgba(255, 255, 255, 1.0);
+        outline: 3px solid rgba(255, 255, 255, 1.0);
+    }
+}
+
 .show-more-button:focus {
     transform: scale(104%);
     color: rgba(255, 255, 255, 1.0);

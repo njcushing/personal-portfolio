@@ -56,7 +56,11 @@ const ProjectList = ({
         return(
             <button
                 className={styles["show-more-button"]}
-                onClick={() => { setRowCount(rowCount + 1); }}
+                onClick={(e) => {
+                    setRowCount(rowCount + 1); 
+                    e.target.blur();
+                    e.preventDefault();
+                }}
             >Show More...</button>
         );
     }, [projects, rowCount, columnCount]);
