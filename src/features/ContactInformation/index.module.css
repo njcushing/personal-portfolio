@@ -11,6 +11,9 @@
 .wrapper[animate="true"] .container {
     animation: 0.5s ease-in-out 0s 1 normal forwards fade-in;
 }
+.wrapper[animate="true"] .contact-me-container {
+    animation: 0.5s ease-in-out 0.5s 1 normal forwards fade-in;
+}
 
 .wrapper {
     container-type: inline-size;
@@ -40,8 +43,6 @@
 
     padding: 0.4rem;
     margin: 1.2rem 0.12rem 0.2rem;
-
-    animation: 0.5s ease-in-out 1s 1 normal forwards fade-in;
 }
 
 .contact-me-title {
