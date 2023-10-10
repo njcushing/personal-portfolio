@@ -20,10 +20,9 @@ const ProjectPanel = ({
             <h4 className={styles["name"]}>{params.name}</h4>
             <ul className={styles["description-container"]}>
                 {params.desc.map((p, i) =>
-                    <p
+                    <li key={i}><p
                         className={styles["description-paragraph"]}
-                        key={i}
-                    >{p}</p>
+                    >{p}</p></li>
                 )}
             </ul>
             <ul className={styles["link-buttons"]}>
