@@ -1,4 +1,4 @@
-/* global global, describe, test, expect */
+/* global describe, test, expect */
 
 import { vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
@@ -8,7 +8,6 @@ import ProjectPanelParams from './../ProjectPanel/ProjectPanelParams.jsx'
 import ProjectList from './ProjectList.jsx'
 
 import * as findGridColumnCount from '../../utils/findGridColumnCount'
-import * as animateInViewport from '../../utils/animateInViewport'
 
 const renderComponent = () => {
     render(<ProjectList
@@ -60,7 +59,7 @@ vi.mock('../../utils/findGridColumnCount', () => ({
 }));
 
 const mockScrollEventListener = vi.fn(() => {});
-vi.mock('../../utils/animateInViewport', () => ({
+vi.mock('@/utils/animateInViewport', () => ({
     default: () => mockScrollEventListener,
 }));
 
