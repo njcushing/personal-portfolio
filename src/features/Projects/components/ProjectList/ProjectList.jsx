@@ -5,6 +5,7 @@ import styles from './ProjectList.module.css';
 import ProjectPanelParams from '../ProjectPanel/ProjectPanelParams';
 
 import ProjectPanel from '../ProjectPanel/ProjectPanel';
+import animateInViewport from '../../utils/animateInViewport';
 import findGridColumnCount from '../../utils/findGridColumnCount';
 
 const ProjectList = ({
@@ -26,13 +27,7 @@ const ProjectList = ({
     }, [projects, rowCount, columnCount]);
 
     useEffect(() => {
-        const eventListener = () => {
-            const viewportHeight = window.innerHeight;
-            const elementYPosRelative = wrapperRef.current.getBoundingClientRect().y;
-            if (elementYPosRelative < viewportHeight) {
-                wrapperRef.current.setAttribute("animate", "true");
-            }
-        };
+        const eventListener = animateInViewport(wrapperRef.current);
         window.addEventListener("scroll", eventListener);
         return () => window.removeEventListener("scroll", eventListener);
     }, [wrapperRef]);
