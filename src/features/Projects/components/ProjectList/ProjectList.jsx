@@ -5,23 +5,14 @@ import styles from './ProjectList.module.css';
 import ProjectPanelParams from '../ProjectPanel/ProjectPanelParams';
 
 import ProjectPanel from '../ProjectPanel/ProjectPanel';
-
-const findGridColumns = (grid) => {
-    try {
-        const gridComputedStyle = window.getComputedStyle(grid);
-        const columnWidthsString = gridComputedStyle.getPropertyValue("grid-template-columns");
-        const numberOfColumns = columnWidthsString.split(" ").length;
-        return numberOfColumns;
-    } catch(error) {
-        return null;
-    }
-};
+import findGridColumnCount from '../../utils/findGridColumnCount';
 
 const ProjectList = ({
     projectCategoryTitle,
     projects,
+    initRowCount,
 }) => {
-    const [rowCount, setRowCount] = useState(2);
+    const [rowCount, setRowCount] = useState(initRowCount);
     const [columnCount, setColumnCount] = useState(0);
 
     const wrapperRef = useRef(null);
@@ -49,7 +40,7 @@ const ProjectList = ({
     const projectListRef = useRef(null);
     const projectList = useMemo(() => {
         return(
-            <div
+            <ul
                 className={styles["project-category-projects"]}
                 ref={projectListRef}
             >
@@ -61,7 +52,7 @@ const ProjectList = ({
                         />
                     );
                 })}
-            </div>
+            </ul>
         );
     }, [reduceProjects]);
 
@@ -80,14 +71,14 @@ const ProjectList = ({
     }, [projects, rowCount, columnCount]);
 
     useEffect(() => {
-        const numberOfColumns = findGridColumns(projectListRef.current);
+        const numberOfColumns = findGridColumnCount(projectListRef.current);
         if (numberOfColumns === null) return;
         if (columnCount !== numberOfColumns) setColumnCount(numberOfColumns);
     }, [projectList, columnCount]);
 
     useEffect(() => {
         const resizeEventListener = () => {
-            const numberOfColumns = findGridColumns(projectListRef.current);
+            const numberOfColumns = findGridColumnCount(projectListRef.current);
             if (numberOfColumns === null) return;
             if (columnCount !== numberOfColumns) setColumnCount(numberOfColumns);
         };
@@ -109,11 +100,13 @@ const ProjectList = ({
 ProjectList.propTypes = {
     projectCategoryTitle: PropTypes.string,
     projects: PropTypes.arrayOf(PropTypes.shape({ ...ProjectPanelParams.propTypes, })),
+    initRowCount: PropTypes.number,
 }
 
 ProjectList.defaultProps = {
     projectCategoryTitle: "Project Category",
     projects: [],
+    initRowCount: 2,
 }
 
 export default ProjectList;

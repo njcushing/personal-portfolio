@@ -40,6 +40,11 @@
     column-gap: 1.0rem;
     justify-items: center;
 
+    list-style: none;
+
+    padding: 0rem;
+    margin: 0rem;
+
     width: auto;
 }
 
