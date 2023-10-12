@@ -4,6 +4,7 @@ import { vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
+import * as React from 'react';
 import ProjectPanelParams from './../ProjectPanel/ProjectPanelParams.jsx'
 import ProjectList from './ProjectList.jsx'
 
@@ -63,19 +64,34 @@ vi.mock('@/utils/animateInViewport', () => ({
     default: () => mockScrollEventListener,
 }));
 
+/*
+vi.mock("react", async () => {
+    const actual = await vi.importActual("react")
+    return {
+        ...actual,
+        useState: () => [2, () => {}],
+    }
+});
+*/
+  
+
 describe("UI/DOM Testing...", () => {
     describe("The window element...", () => {
-        test("When resized, should call the 'findGridColumnCount' function", () => {
-            renderComponent();
-            const spy = vi.spyOn(findGridColumnCount, 'default');
-            window.dispatchEvent(new Event('resize'));
-            expect(spy).toHaveBeenCalledTimes(1);
+        describe("When resized...", () => {
+            test("Should call the 'findGridColumnCount' function", () => {
+                renderComponent();
+                const spy = vi.spyOn(findGridColumnCount, 'default');
+                window.dispatchEvent(new Event('resize'));
+                expect(spy).toHaveBeenCalledTimes(1);
+            });
         });
-        test("When scrolled, should call the 'animateInViewport' function", () => {
-            renderComponent();
-            mockScrollEventListener.mockClear();
-            window.dispatchEvent(new Event('scroll'));
-            expect(mockScrollEventListener).toHaveBeenCalledTimes(1);
+        describe("When scrolled...", () => {
+            test("Should call the 'animateInViewport' function", () => {
+                renderComponent();
+                mockScrollEventListener.mockClear();
+                window.dispatchEvent(new Event('scroll'));
+                expect(mockScrollEventListener).toHaveBeenCalledTimes(1);
+            });
         });
     });
     describe("The header element containing the project category's name...", () => {

@@ -66,20 +66,14 @@ const ProjectList = ({
     }, [projects, rowCount, columnCount]);
 
     useEffect(() => {
-        const numberOfColumns = findGridColumnCount(projectListRef.current);
-        if (numberOfColumns === null) return;
-        if (columnCount !== numberOfColumns) setColumnCount(numberOfColumns);
-    }, [projectList, columnCount]);
-
-    useEffect(() => {
         const resizeEventListener = () => {
             const numberOfColumns = findGridColumnCount(projectListRef.current);
-            if (numberOfColumns === null) return;
-            if (columnCount !== numberOfColumns) setColumnCount(numberOfColumns);
+            setColumnCount(numberOfColumns);
         };
         window.addEventListener("resize", resizeEventListener);
+        window.dispatchEvent(new Event("resize")); /* For first render on component mount */
         return () => window.removeEventListener("resize", resizeEventListener);
-    }, [columnCount]);
+    }, []);
 
     return (
         <div className={styles["wrapper"]} ref={wrapperRef}>
