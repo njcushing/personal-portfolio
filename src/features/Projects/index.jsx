@@ -5,12 +5,13 @@ import ProjectPanelParams from './components/ProjectPanel/ProjectPanelParams';
 
 import ProjectList from './components/ProjectList/ProjectList';
 
+import toDoListThumbnail from './assets/to-do-list-thumbnail.png';
 import battleshipThumbnail from './assets/battleship-thumbnail.png';
 import libraryThumbnail from './assets/library-thumbnail.png';
 import ticTacToeThumbnail from './assets/tic-tac-toe-thumbnail.png';
-import toDoListThumbnail from './assets/to-do-list-thumbnail.png';
 import weatherAppThumbnail from './assets/weather-app-thumbnail.png';
 import signUpFormThumbnail from './assets/sign-up-form-thumbnail.png';
+import adminDashboardThumbnail from './assets/admin-dashboard-thumbnail.png';
 
 const params = () => {  return { ...ProjectPanelParams.defaultProps, }; }
 
@@ -92,6 +93,18 @@ const theOdinProjects = [
         imgAlt: "Sign Up Form application",
         pageUrl: "https://njcushing.github.io/odin-sign-up-form/",
         githubUrl: "https://github.com/njcushing/odin-sign-up-form",
+    },
+
+    { ...params(),
+        name: "Admin Dashboard",
+        desc: [
+            `An example social media page that utilises many flexible display
+            elements, made for practising the use of CSS Grid.`,
+        ],
+        imgSrc: adminDashboardThumbnail,
+        imgAlt: "Admin Dashboard application",
+        pageUrl: "https://njcushing.github.io/odin-admin-dashboard/",
+        githubUrl: "https://github.com/njcushing/odin-admin-dashboard",
     },
 
 ];
