@@ -68,11 +68,14 @@ const ProjectList = ({
     useEffect(() => {
         const resizeEventListener = () => {
             const numberOfColumns = findGridColumnCount(projectListRef.current);
-            setColumnCount(numberOfColumns);
+            if (numberOfColumns != columnCount) setColumnCount(numberOfColumns);
         };
         window.addEventListener("resize", resizeEventListener);
-        window.dispatchEvent(new Event("resize")); /* For first render on component mount */
         return () => window.removeEventListener("resize", resizeEventListener);
+    }, [projectListRef, columnCount]);
+
+    useEffect(() => {
+        window.dispatchEvent(new Event("resize")); /* For first render on component mount */
     }, []);
 
     return (
