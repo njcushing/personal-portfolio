@@ -2,16 +2,11 @@ import { useEffect, forwardRef } from 'react';
 import styles from './index.module.css';
 
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
+import animateInViewport from '@/utils/animateInViewport';
 
 const ContactInformation = forwardRef(function ContactInformation(props, ref) {
     useEffect(() => {
-        const eventListener = () => {
-            const viewportHeight = window.innerHeight;
-            const elementYPosRelative = ref.current.getBoundingClientRect().y;
-            if (elementYPosRelative < viewportHeight) {
-                ref.current.setAttribute("animate", "true");
-            }
-        };
+        const eventListener = animateInViewport(ref.current);
         window.addEventListener("scroll", eventListener);
         return () => window.removeEventListener("scroll", eventListener);
     }, [ref]);
