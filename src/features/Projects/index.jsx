@@ -5,10 +5,25 @@ import ProjectPanelParams from './components/ProjectPanel/ProjectPanelParams';
 
 import ProjectList from './components/ProjectList/ProjectList';
 
+import battleshipThumbnail from './assets/battleship-thumbnail.png';
+
 const params = () => {  return { ...ProjectPanelParams.defaultProps, }; }
 
 const theOdinProjects = [
-    { ...params(), },
+
+    /* Battleship */
+    { ...params(),
+        name: "Battleship",
+        desc: [
+            `Fancy a game of battleship? Play locally against a friend or
+            against the computer that uses AI to give you a proper challenge.`,
+        ],
+        imgSrc: battleshipThumbnail,
+        imgAlt: "Battleship",
+        pageUrl:"https://njcushing.github.io/odin-battleship/",
+        githubUrl: "https://github.com/njcushing/odin-battleship",
+    },
+
     { ...params(), },
     { ...params(), },
     { ...params(), },
