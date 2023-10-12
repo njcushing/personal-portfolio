@@ -1,12 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { BrowserRouter } from "react-router-dom";
-import PropTypes from 'prop-types';
 import styles from './Landing.module.css';
 
 import Navigation from '@/features/Navigation';
 import PersonalInformation from '@/features/PersonalInformation';
 import Projects from '@/features/Projects';
 import ContactInformation from '@/features/ContactInformation';
+import verticalScrollToElement from '@/utils/verticalScrollToElement';
 
 const Landing = () => {
     const personalInformationWrapperRef = useRef(null);
@@ -14,21 +14,13 @@ const Landing = () => {
     const contactInformationWrapperRef = useRef(null);
 
     const navButtonClicked = (sectionName) => {
-        const scrollBorderBuffer = 14; /* Given value translates to pixels */
         let ref;
         switch (sectionName) {
             case "PersonalInformation": ref = personalInformationWrapperRef.current; break;
             case "Projects": ref = projectsWrapperRef.current; break;
             case "ContactInformation": ref = contactInformationWrapperRef.current; break;
         }
-        const viewportHeight = window.innerHeight;
-        const elementHeight = ref.getBoundingClientRect().height + (2 * scrollBorderBuffer);
-        const elementYPos = ref.offsetTop;
-        if (elementHeight > viewportHeight) {
-            window.scrollTo({ top: Math.max(0, (elementYPos - scrollBorderBuffer)), behavior: "smooth" })
-        } else {
-            ref.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
+        verticalScrollToElement(ref, 14);
     };
 
     return (
