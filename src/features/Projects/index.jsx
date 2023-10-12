@@ -9,12 +9,26 @@ import battleshipThumbnail from './assets/battleship-thumbnail.png';
 import libraryThumbnail from './assets/library-thumbnail.png';
 import ticTacToeThumbnail from './assets/tic-tac-toe-thumbnail.png';
 import toDoListThumbnail from './assets/to-do-list-thumbnail.png';
+import weatherAppThumbnail from './assets/weather-app-thumbnail.png';
 
 const params = () => {  return { ...ProjectPanelParams.defaultProps, }; }
 
 const theOdinProjects = [
 
-    /* Battleship */
+    { ...params(),
+        name: "To-Do List",
+        desc: [
+            `Create projects and add to-do items. Set an item's name,
+            description, priority and more! You can sort your items on various
+            criteria and set them to complete when you're done. You can
+            even save them to local storage!`,
+        ],
+        imgSrc: toDoListThumbnail,
+        imgAlt: "To-Do List application",
+        pageUrl:"https://njcushing.github.io/odin-to-do-list/",
+        githubUrl: "https://github.com/njcushing/odin-to-do-list",
+    },
+
     { ...params(),
         name: "Battleship",
         desc: [
@@ -39,6 +53,7 @@ const theOdinProjects = [
         pageUrl:"https://njcushing.github.io/odin-library/",
         githubUrl: "https://github.com/njcushing/odin-library",
     },
+
     { ...params(),
         name: "Tic-Tac-Toe",
         desc: [
@@ -51,20 +66,19 @@ const theOdinProjects = [
         pageUrl:"https://njcushing.github.io/odin-tic-tac-toe/",
         githubUrl: "https://github.com/njcushing/odin-tic-tac-toe",
     },
+
     { ...params(),
-        name: "To-Do List",
+        name: "Weather App",
         desc: [
-            `Create projects and add to-do items. Set an item's name,
-            description, priority and more! You can sort your items on various
-            criteria and set them to complete when you're done. You can
-            even save them to local storage!`,
+            `A small application that displays some information about the
+            current weather from wherever you like in the world.`,
         ],
-        imgSrc: toDoListThumbnail,
-        imgAlt: "To-Do List application",
-        pageUrl:"https://njcushing.github.io/odin-to-do-list/",
-        githubUrl: "https://github.com/njcushing/odin-to-do-list",
+        imgSrc: weatherAppThumbnail,
+        imgAlt: "Weather application",
+        pageUrl:"https://njcushing.github.io/odin-weather-app/",
+        githubUrl: "https://github.com/njcushing/odin-weather-app",
     },
-    { ...params(), },
+
     { ...params(), },
     { ...params(), },
     { ...params(), },
