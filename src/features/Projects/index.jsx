@@ -10,6 +10,7 @@ import libraryThumbnail from './assets/library-thumbnail.png';
 import ticTacToeThumbnail from './assets/tic-tac-toe-thumbnail.png';
 import toDoListThumbnail from './assets/to-do-list-thumbnail.png';
 import weatherAppThumbnail from './assets/weather-app-thumbnail.png';
+import signUpFormThumbnail from './assets/sign-up-form-thumbnail.png';
 
 const params = () => {  return { ...ProjectPanelParams.defaultProps, }; }
 
@@ -21,11 +22,11 @@ const theOdinProjects = [
             `Create projects and add to-do items. Set an item's name,
             description, priority and more! You can sort your items on various
             criteria and set them to complete when you're done. You can
-            even save them to local storage!`,
+            even save projects to local storage!`,
         ],
         imgSrc: toDoListThumbnail,
         imgAlt: "To-Do List application",
-        pageUrl:"https://njcushing.github.io/odin-to-do-list/",
+        pageUrl: "https://njcushing.github.io/odin-to-do-list/",
         githubUrl: "https://github.com/njcushing/odin-to-do-list",
     },
 
@@ -37,7 +38,7 @@ const theOdinProjects = [
         ],
         imgSrc: battleshipThumbnail,
         imgAlt: "Battleship application",
-        pageUrl:"https://njcushing.github.io/odin-battleship/",
+        pageUrl: "https://njcushing.github.io/odin-battleship/",
         githubUrl: "https://github.com/njcushing/odin-battleship",
     },
 
@@ -46,11 +47,12 @@ const theOdinProjects = [
         desc: [
             `A small library application that allows you to add and delete
             books. Each book can be given an author, a page count and an
-            identification of whether or not it has been read.`,
+            identification of whether or not it has been read. (This project
+            does not save on reload).`,
         ],
         imgSrc: libraryThumbnail,
         imgAlt: "Library application",
-        pageUrl:"https://njcushing.github.io/odin-library/",
+        pageUrl: "https://njcushing.github.io/odin-library/",
         githubUrl: "https://github.com/njcushing/odin-library",
     },
 
@@ -63,7 +65,7 @@ const theOdinProjects = [
         ],
         imgSrc: ticTacToeThumbnail,
         imgAlt: "Tic-Tac-Toe application",
-        pageUrl:"https://njcushing.github.io/odin-tic-tac-toe/",
+        pageUrl: "https://njcushing.github.io/odin-tic-tac-toe/",
         githubUrl: "https://github.com/njcushing/odin-tic-tac-toe",
     },
 
@@ -75,15 +77,23 @@ const theOdinProjects = [
         ],
         imgSrc: weatherAppThumbnail,
         imgAlt: "Weather application",
-        pageUrl:"https://njcushing.github.io/odin-weather-app/",
+        pageUrl: "https://njcushing.github.io/odin-weather-app/",
         githubUrl: "https://github.com/njcushing/odin-weather-app",
     },
 
-    { ...params(), },
-    { ...params(), },
-    { ...params(), },
-    { ...params(), },
-    { ...params(), },
+    { ...params(),
+        name: "Sign Up Form",
+        desc: [
+            `More of a proof-of-concept, this project was made to practise
+            using form fields and error messages when the form fields' contents
+            are incorrect.`,
+        ],
+        imgSrc: signUpFormThumbnail,
+        imgAlt: "Sign Up Form application",
+        pageUrl: "https://njcushing.github.io/odin-sign-up-form/",
+        githubUrl: "https://github.com/njcushing/odin-sign-up-form",
+    },
+
 ];
 
 const Projects = forwardRef(function Projects(props, ref) {
