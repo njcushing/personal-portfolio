@@ -7,6 +7,7 @@ import ProjectList from './components/ProjectList/ProjectList';
 
 import battleshipThumbnail from './assets/battleship-thumbnail.png';
 import libraryThumbnail from './assets/library-thumbnail.png';
+import ticTacToeThumbnail from './assets/tic-tac-toe-thumbnail.png';
 
 const params = () => {  return { ...ProjectPanelParams.defaultProps, }; }
 
@@ -37,7 +38,18 @@ const theOdinProjects = [
         pageUrl:"https://njcushing.github.io/odin-library/",
         githubUrl: "https://github.com/njcushing/odin-library/",
     },
-    { ...params(), },
+    { ...params(),
+        name: "Tic-Tac-Toe",
+        desc: [
+            `Play a game of Tic-Tac-Toe locally against a friend or against the
+            computer! The computer has two settings: one for random placement
+            and another for perfect AI where it never loses!`,
+        ],
+        imgSrc: ticTacToeThumbnail,
+        imgAlt: "Tic-Tac-Toe application",
+        pageUrl:"https://njcushing.github.io/odin-tic-tac-toe/",
+        githubUrl: "https://github.com/njcushing/odin-tic-tac-toe",
+    },
     { ...params(), },
     { ...params(), },
     { ...params(), },
