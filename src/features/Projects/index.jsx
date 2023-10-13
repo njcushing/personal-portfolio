@@ -14,6 +14,7 @@ import signUpFormThumbnail from './assets/sign-up-form-thumbnail.png';
 import adminDashboardThumbnail from './assets/admin-dashboard-thumbnail.png';
 import shoppingCartThumbnail from './assets/shopping-cart-thumbnail.png';
 import memoryCardThumbnail from './assets/memory-card-thumbnail.png';
+import cvApplicationThumbnail from './assets/cv-application-thumbnail.png';
 
 const params = () => {  return { ...ProjectPanelParams.defaultProps, }; }
 
@@ -131,6 +132,19 @@ const theOdinProjects = [
         imgAlt: "Memory Card application",
         pageUrl: "https://magnificent-manatee-6e8204.netlify.app/",
         githubUrl: "https://github.com/njcushing/odin-memory-card",
+    },
+
+    { ...params(),
+        name: "CV Application",
+        desc: [
+            `An application with various personal information form fields that
+            can be generated and filled in to represent the type of information
+            typically given on a CV.`,
+        ],
+        imgSrc: cvApplicationThumbnail,
+        imgAlt: "CV application",
+        pageUrl: "https://glistening-madeleine-a41cb7.netlify.app/",
+        githubUrl: "https://github.com/njcushing/odin-cv-application",
     },
 
 ];
