@@ -7,6 +7,7 @@ import Separator from './components/Separator/Separator';
 const Navigation = ({
     personalInformationOnClickHandler,
     projectsOnClickHandler,
+    technologiesOnClickHandler,
     contactInformationOnClickHandler,
 }) => {
     return (
@@ -24,6 +25,11 @@ const Navigation = ({
                 /></li>
                 <Separator height="1px" />
                 <li className={styles["nav-button"]}><NavigationButton
+                    text="Technologies"
+                    onClickHandler={technologiesOnClickHandler}
+                /></li>
+                <Separator height="1px" />
+                <li className={styles["nav-button"]}><NavigationButton
                     text="Contact Me"
                     onClickHandler={contactInformationOnClickHandler}
                 /></li>
@@ -36,12 +42,14 @@ const Navigation = ({
 Navigation.propTypes = {
     personalInformationOnClickHandler: PropTypes.func,
     projectsOnClickHandler: PropTypes.func,
+    technologiesOnClickHandler: PropTypes.func,
     contactInformationOnClickHandler: PropTypes.func,
 }
 
 Navigation.defaultProps = {
     personalInformationOnClickHandler: null,
     projectsOnClickHandler: null,
+    technologiesOnClickHandler: null,
     contactInformationOnClickHandler: null,
 }
 
