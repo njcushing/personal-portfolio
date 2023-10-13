@@ -1,0 +1,14 @@
+.wrapper {
+    container-type: inline-size;
+    
+    width: 100%;
+    max-width: 1000px;
+}
+
+.container {
+    border: 1px solid white;
+}
+
+.category-title {
+    color: white;
+}

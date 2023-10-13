@@ -5,12 +5,25 @@
     max-width: 1000px;
 }
 
-.container {}
-
 .title {
     font-size: 2.2rem;
     text-align: center;
 
     padding: 0rem;
     margin: 0rem;
+}
+
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    row-gap: 1.0rem;
+    column-gap: 1.0rem;
+    justify-items: center;
+
+    list-style: none;
+
+    padding: 0rem;
+    margin: 0rem;
+
+    width: auto;
 }
