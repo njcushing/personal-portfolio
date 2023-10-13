@@ -25,8 +25,8 @@ const theOdinProjects = [
         desc: [
             `Create projects and add to-do items. Set an item's name,
             description, priority and more! You can sort your items on various
-            criteria and set them to complete when you're done. You can
-            even save projects to local storage!`,
+            criteria, set them to 'complete' and save them to local
+            storage!`,
         ],
         imgSrc: toDoListThumbnail,
         imgAlt: "To-Do List application",
@@ -113,8 +113,7 @@ const theOdinProjects = [
         desc: [
             `A small library application that allows you to add and delete
             books. Each book can be given an author, a page count and an
-            identification of whether or not it has been read. (This project
-            does not save on reload).`,
+            identification of whether or not it has been read.`,
         ],
         imgSrc: libraryThumbnail,
         imgAlt: "Library application",

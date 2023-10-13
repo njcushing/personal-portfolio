@@ -73,6 +73,7 @@
 .description-paragraph {
     color: rgba(0, 0, 0, 0.96);
     font-size: 0.9rem;
+    line-height: 1.2rem;
 
     width: 100%;
     padding: 0rem;
