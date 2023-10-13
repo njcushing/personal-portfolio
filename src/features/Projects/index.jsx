@@ -7,14 +7,14 @@ import ProjectList from './components/ProjectList/ProjectList';
 
 import toDoListThumbnail from './assets/to-do-list-thumbnail.png';
 import battleshipThumbnail from './assets/battleship-thumbnail.png';
-import libraryThumbnail from './assets/library-thumbnail.png';
 import ticTacToeThumbnail from './assets/tic-tac-toe-thumbnail.png';
+import memoryCardThumbnail from './assets/memory-card-thumbnail.png';
 import weatherAppThumbnail from './assets/weather-app-thumbnail.png';
+import shoppingCartThumbnail from './assets/shopping-cart-thumbnail.png';
+import cvApplicationThumbnail from './assets/cv-application-thumbnail.png';
+import libraryThumbnail from './assets/library-thumbnail.png';
 import signUpFormThumbnail from './assets/sign-up-form-thumbnail.png';
 import adminDashboardThumbnail from './assets/admin-dashboard-thumbnail.png';
-import shoppingCartThumbnail from './assets/shopping-cart-thumbnail.png';
-import memoryCardThumbnail from './assets/memory-card-thumbnail.png';
-import cvApplicationThumbnail from './assets/cv-application-thumbnail.png';
 
 const params = () => {  return { ...ProjectPanelParams.defaultProps, }; }
 
@@ -47,20 +47,6 @@ const theOdinProjects = [
     },
 
     { ...params(),
-        name: "Library",
-        desc: [
-            `A small library application that allows you to add and delete
-            books. Each book can be given an author, a page count and an
-            identification of whether or not it has been read. (This project
-            does not save on reload).`,
-        ],
-        imgSrc: libraryThumbnail,
-        imgAlt: "Library application",
-        pageUrl: "https://njcushing.github.io/odin-library/",
-        githubUrl: "https://github.com/njcushing/odin-library",
-    },
-
-    { ...params(),
         name: "Tic-Tac-Toe",
         desc: [
             `Play a game of Tic-Tac-Toe locally against a friend or against the
@@ -74,6 +60,18 @@ const theOdinProjects = [
     },
 
     { ...params(),
+        name: "Memory Card",
+        desc: [
+            `A memory game where you increase your score by clicking the cards
+            on the screen without clicking the same one more than once.`,
+        ],
+        imgSrc: memoryCardThumbnail,
+        imgAlt: "Memory Card application",
+        pageUrl: "https://magnificent-manatee-6e8204.netlify.app/",
+        githubUrl: "https://github.com/njcushing/odin-memory-card",
+    },
+
+    { ...params(),
         name: "Weather App",
         desc: [
             `A small application that displays some information about the
@@ -83,6 +81,45 @@ const theOdinProjects = [
         imgAlt: "Weather application",
         pageUrl: "https://njcushing.github.io/odin-weather-app/",
         githubUrl: "https://github.com/njcushing/odin-weather-app",
+    },
+
+    { ...params(),
+        name: "Shopping Cart",
+        desc: [
+            `A mock shop website where you can add various items from multiple
+            categories to a cart, see your total price and go to the checkout.`,
+        ],
+        imgSrc: shoppingCartThumbnail,
+        imgAlt: "Shopping Cart application",
+        pageUrl: "https://main--melodious-choux-e340b9.netlify.app/",
+        githubUrl: "https://github.com/njcushing/odin-shopping-cart",
+    },
+
+    { ...params(),
+        name: "CV Application",
+        desc: [
+            `An application with various personal information form fields that
+            can be generated and filled in to represent the type of information
+            typically given on a CV.`,
+        ],
+        imgSrc: cvApplicationThumbnail,
+        imgAlt: "CV application",
+        pageUrl: "https://glistening-madeleine-a41cb7.netlify.app/",
+        githubUrl: "https://github.com/njcushing/odin-cv-application",
+    },
+
+    { ...params(),
+        name: "Library",
+        desc: [
+            `A small library application that allows you to add and delete
+            books. Each book can be given an author, a page count and an
+            identification of whether or not it has been read. (This project
+            does not save on reload).`,
+        ],
+        imgSrc: libraryThumbnail,
+        imgAlt: "Library application",
+        pageUrl: "https://njcushing.github.io/odin-library/",
+        githubUrl: "https://github.com/njcushing/odin-library",
     },
 
     { ...params(),
@@ -108,43 +145,6 @@ const theOdinProjects = [
         imgAlt: "Admin Dashboard application",
         pageUrl: "https://njcushing.github.io/odin-admin-dashboard/",
         githubUrl: "https://github.com/njcushing/odin-admin-dashboard",
-    },
-
-    { ...params(),
-        name: "Shopping Cart",
-        desc: [
-            `A mock shop website where you can add various items from multiple
-            categories to a cart, see your total price and go to the checkout.`,
-        ],
-        imgSrc: shoppingCartThumbnail,
-        imgAlt: "Shopping Cart application",
-        pageUrl: "https://main--melodious-choux-e340b9.netlify.app/",
-        githubUrl: "https://github.com/njcushing/odin-shopping-cart",
-    },
-
-    { ...params(),
-        name: "Memory Card",
-        desc: [
-            `A memory game where you increase your score by clicking the cards
-            on the screen without clicking the same one more than once.`,
-        ],
-        imgSrc: memoryCardThumbnail,
-        imgAlt: "Memory Card application",
-        pageUrl: "https://magnificent-manatee-6e8204.netlify.app/",
-        githubUrl: "https://github.com/njcushing/odin-memory-card",
-    },
-
-    { ...params(),
-        name: "CV Application",
-        desc: [
-            `An application with various personal information form fields that
-            can be generated and filled in to represent the type of information
-            typically given on a CV.`,
-        ],
-        imgSrc: cvApplicationThumbnail,
-        imgAlt: "CV application",
-        pageUrl: "https://glistening-madeleine-a41cb7.netlify.app/",
-        githubUrl: "https://github.com/njcushing/odin-cv-application",
     },
 
 ];
