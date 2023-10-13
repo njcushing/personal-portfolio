@@ -12,6 +12,7 @@ import ticTacToeThumbnail from './assets/tic-tac-toe-thumbnail.png';
 import weatherAppThumbnail from './assets/weather-app-thumbnail.png';
 import signUpFormThumbnail from './assets/sign-up-form-thumbnail.png';
 import adminDashboardThumbnail from './assets/admin-dashboard-thumbnail.png';
+import shoppingCartThumbnail from './assets/shopping-cart-thumbnail.png';
 
 const params = () => {  return { ...ProjectPanelParams.defaultProps, }; }
 
@@ -105,6 +106,18 @@ const theOdinProjects = [
         imgAlt: "Admin Dashboard application",
         pageUrl: "https://njcushing.github.io/odin-admin-dashboard/",
         githubUrl: "https://github.com/njcushing/odin-admin-dashboard",
+    },
+
+    { ...params(),
+        name: "Shopping Cart",
+        desc: [
+            `A mock shop website where you can add various items from multiple
+            categories to a cart, see your total price and go to the checkout.`,
+        ],
+        imgSrc: shoppingCartThumbnail,
+        imgAlt: "Shopping Cart application",
+        pageUrl: "https://main--melodious-choux-e340b9.netlify.app/",
+        githubUrl: "https://github.com/njcushing/odin-shopping-cart",
     },
 
 ];
