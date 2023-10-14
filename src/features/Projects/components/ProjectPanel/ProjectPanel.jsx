@@ -4,7 +4,7 @@ import styles from './ProjectPanel.module.css';
 import ProjectPanelParams from './ProjectPanelParams';
 import { validateTechnologies } from '@/utils/technologiesInformation';
 
-import TechnologyNameBox from './../TechnologyNameBox/TechnologyNameBox';
+import TechnologyNameBox from '@/components/TechnologyNameBox/TechnologyNameBox';
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
 import MaterialSymbolsAnchor from '@/components/MaterialSymbolsAnchor/MaterialSymbolsAnchor';
 
