@@ -46,9 +46,14 @@
     margin: 0rem;
 
     width: auto;
+
+    border: 1px solid #000;
 }
 
 .project-category-projects > li {
+    display: flex;
+    justify-content: center;
+    
     width: 100%;
 }
 
