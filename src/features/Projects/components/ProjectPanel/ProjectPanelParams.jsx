@@ -7,6 +7,7 @@ ProjectPanelParams.propTypes = {
     desc: PropTypes.arrayOf(PropTypes.string),
     imgSrc: PropTypes.string,
     imgAlt: PropTypes.string,
+    technologies: PropTypes.array,
     pageUrl: PropTypes.string,
     githubUrl: PropTypes.string,
 };
@@ -16,6 +17,7 @@ ProjectPanelParams.defaultProps = {
     desc: ["Project description"],
     imgSrc: "",
     imgAlt: "",
+    technologies: [],
     pageUrl: null,
     githubUrl: null,
 };

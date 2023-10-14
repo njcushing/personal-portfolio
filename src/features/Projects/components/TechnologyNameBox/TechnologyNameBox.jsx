@@ -12,10 +12,13 @@ const TechnologyNameBox = ({
     const technologyInformation = getTechnologyInformation(technologyID);
 
     return (
-        <div className={styles["wrapper"]}>
-        <div className={styles["container"]}>
+        <div
+            className={styles["container"]}
+            style={{
+                backgroundColor: technologyInformation.baseColour,
+            }}
+        >
             <h5 className={styles["technology-name"]}>{technologyInformation.name}</h5>
-        </div>
         </div>
     );
 };

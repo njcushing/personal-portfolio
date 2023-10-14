@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './ProjectPanel.module.css';
 
 import ProjectPanelParams from './ProjectPanelParams';
+import { validateTechnologies } from '@/utils/technologiesInformation';
 
 import TechnologyNameBox from './../TechnologyNameBox/TechnologyNameBox';
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
@@ -10,6 +11,8 @@ import MaterialSymbolsAnchor from '@/components/MaterialSymbolsAnchor/MaterialSy
 const ProjectPanel = ({
     params,
 }) => {
+    const reducedTechnologiesArray = validateTechnologies(null, params.technologies);
+
     return (
         <div className={styles["wrapper"]}>
         <div className={styles["container"]}>
@@ -28,9 +31,13 @@ const ProjectPanel = ({
             </ul>
             <div className={styles["technologies-and-links-container"]}>
                 <ul className={styles["technologies-list"]}>
-                    <TechnologyNameBox technologyID="html" />
-                    <TechnologyNameBox technologyID="css" />
-                    <TechnologyNameBox technologyID="javascript" />
+                    {reducedTechnologiesArray.map((technology) =>
+                        <li key={technology}>
+                            <TechnologyNameBox
+                                technologyID={technology}
+                            />
+                        </li>
+                    )}
                 </ul>
                 <ul className={styles["link-buttons"]}>
                     <li><MaterialSymbolsAnchor
