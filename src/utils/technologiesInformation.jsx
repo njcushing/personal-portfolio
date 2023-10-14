@@ -30,19 +30,25 @@ const allTechnologies = () => {
     return arr;
 };
 
-const validateTechnologies = (category, technologies) => {
+const validateTechnologies = (category, technologies, componentName) => {
     const reducedTechnologiesArray = [];
+    const technologiesArray = allTechnologies();
     for (let i = 0; i < technologies.length; i++) {
-        if (!technologiesAssociations[category].technologies.has(technologies[i])) {
+        if (
+            (category && !technologiesAssociations[category].technologies.has(technologies[i]))
+         || (!category && !(technologiesArray.includes(technologies[i])))
+        ) {
             console.error(
                 new Error(
                       "Invalid prop "
                     + `'${technologies[i]}' `
                     + "supplied to "
-                    + `'${category}' `
-                    + "category of "
-                    + "'TechnologiesList', expected one of: "
-                    + `${[...technologiesAssociations[category].technologies]}`
+                    + `${category ? `'${category}' category of` : ""}`
+                    + `${componentName ? `'${componentName}'` : "component"}, expected one of: `
+                    + `${     category
+                            ? [...technologiesAssociations[category].technologies]
+                            : technologiesArray
+                        }`
                 )
             );
         } else {
