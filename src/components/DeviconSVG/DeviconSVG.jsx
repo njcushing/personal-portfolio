@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import styles from './DeviconSVG.module.css';
 
 import {
     allTechnologies,
@@ -14,12 +13,19 @@ const DeviconSVG = ({
     const iconInformation = getTechnologyDeviconInformation(technologyID);
 
     return (
-        <svg
-            width={scale * 24}
-            height={scale * 24}
-            viewBox="0 0 128 128"
-            fill={colour}
-        >{iconInformation.svg}</svg>
+        <div
+            style={{
+                width: `${scale * 24}px`,
+                height: `${scale * 24}px`,
+            }}
+        >
+            <svg
+                width={scale * 24}
+                height={scale * 24}
+                fill={colour}
+                viewBox="0 0 128 128"
+            >{iconInformation.svg}</svg>
+        </div>
     )
 }
 

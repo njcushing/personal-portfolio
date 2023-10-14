@@ -16,7 +16,7 @@ const TechnologiesPanel = ({
     return (
         <div className={styles["wrapper"]}>
         <div className={styles["container"]}>
-            <DeviconSVG technologyID={technologyID} />
+            <DeviconSVG technologyID={technologyID} scale={1.5} colour="white" />
             <h4 className={styles["technology"]}>{iconInformation.name}</h4>
         </div>
         </div>

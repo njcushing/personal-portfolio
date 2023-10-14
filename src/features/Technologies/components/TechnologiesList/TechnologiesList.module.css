@@ -3,11 +3,16 @@
     
     width: 100%;
     max-width: 320px;
-
-    border: 1px solid white;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+}
+
+.technologies-panels-container {
+    list-style: none;
+
+    padding: 0rem;
+    margin: 0rem;
 }

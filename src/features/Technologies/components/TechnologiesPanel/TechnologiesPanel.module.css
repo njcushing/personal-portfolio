@@ -1,0 +1,7 @@
+.wrapper {
+    container-type: inline-size;
+}
+
+.container {
+    display: flex;
+}
