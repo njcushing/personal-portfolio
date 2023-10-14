@@ -48,6 +48,10 @@
     width: auto;
 }
 
+.project-category-projects > li {
+    width: 100%;
+}
+
 .project-category-projects > * {
     opacity: 0%;
 }

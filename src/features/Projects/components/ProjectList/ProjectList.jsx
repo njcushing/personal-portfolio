@@ -41,10 +41,9 @@ const ProjectList = ({
             >
                 {reduceProjects().map((project, i) => {
                     return(
-                        <ProjectPanel
+                        <li key={i}><ProjectPanel
                             params={project}
-                            key={i}
-                        />
+                        /></li>
                     );
                 })}
             </ul>
