@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './TechnologiesPanel.module.css';
+import styles from './TechnologyPanel.module.css';
 
 import {
     allTechnologies,
@@ -8,7 +8,7 @@ import {
 
 import DeviconSVG from '@/components/DeviconSVG/DeviconSVG';
 
-const TechnologiesPanel = ({
+const TechnologyPanel = ({
     technologyID,
 }) => {
     const iconInformation = getTechnologyInformation(technologyID);
@@ -23,8 +23,8 @@ const TechnologiesPanel = ({
     );
 };
 
-TechnologiesPanel.propTypes = {
+TechnologyPanel.propTypes = {
     technologyID: PropTypes.oneOf(allTechnologies()).isRequired,
 };
 
-export default TechnologiesPanel;
+export default TechnologyPanel;

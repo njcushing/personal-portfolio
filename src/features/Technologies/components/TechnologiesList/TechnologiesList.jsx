@@ -7,7 +7,7 @@ import {
     getCategoryName,
 } from '@/utils/technologiesInformation';
 
-import TechnologiesPanel from './../TechnologiesPanel/TechnologiesPanel';
+import TechnologyPanel from '../TechnologyPanel/TechnologyPanel';
 
 const TechnologiesList = ({
     category,
@@ -24,7 +24,7 @@ const TechnologiesList = ({
             <ul className={styles["technologies-panels-container"]}>
                 {reducedTechnologiesArray.map((technology) =>
                     <li key={technology}>
-                        <TechnologiesPanel
+                        <TechnologyPanel
                             technologyID={technology}
                         />
                     </li>
