@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import styles from './TechnologiesPanel.module.css';
 
+import { allTechnologies } from '../../utils/TechnologiesListProps';
+
 const TechnologiesPanel = ({
     technologyID,
 }) => {
@@ -14,13 +16,7 @@ const TechnologiesPanel = ({
 };
 
 TechnologiesPanel.propTypes = {
-    technologyID: PropTypes.oneOf([
-        "html",
-        "css",
-        "javascript",
-        "react",
-        "git",
-    ]).isRequired,
+    technologyID: PropTypes.oneOf(allTechnologies()).isRequired,
 };
 
 export default TechnologiesPanel;
