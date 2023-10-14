@@ -6,16 +6,17 @@ import {
     getTechnologyDeviconInformation,
 } from '../../utils/TechnologiesListProps';
 
+import DeviconSVG from '../DeviconSVG/DeviconSVG';
+
 const TechnologiesPanel = ({
     technologyID,
 }) => {
-    const iconScale = 1;
     const iconInformation = getTechnologyDeviconInformation(technologyID);
 
     return (
         <div className={styles["wrapper"]}>
         <div className={styles["container"]}>
-            <svg width={48} height={48} viewBox="0 0 128 128">{iconInformation.svg}</svg>
+            <DeviconSVG technologyID={technologyID} />
             <h4 className={styles["technology"]}>{iconInformation.name}</h4>
         </div>
         </div>
