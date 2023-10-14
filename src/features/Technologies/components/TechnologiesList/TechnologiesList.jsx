@@ -5,7 +5,7 @@ import {
     technologiesCategories,
     validateTechnologies,
     getCategoryName,
-} from '../../utils/TechnologiesListProps';
+} from '@/utils/technologiesInformation';
 
 import TechnologiesPanel from './../TechnologiesPanel/TechnologiesPanel';
 

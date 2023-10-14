@@ -4,9 +4,9 @@ import styles from './TechnologiesPanel.module.css';
 import {
     allTechnologies,
     getTechnologyDeviconInformation,
-} from '../../utils/TechnologiesListProps';
+} from '@/utils/technologiesInformation';
 
-import DeviconSVG from './../DeviconSVG/DeviconSVG';
+import DeviconSVG from '@/components/DeviconSVG/DeviconSVG';
 
 const TechnologiesPanel = ({
     technologyID,
