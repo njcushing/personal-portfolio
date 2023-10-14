@@ -3,6 +3,7 @@ import styles from './ProjectPanel.module.css';
 
 import ProjectPanelParams from './ProjectPanelParams';
 
+import TechnologyNameBox from './../TechnologyNameBox/TechnologyNameBox';
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
 import MaterialSymbolsAnchor from '@/components/MaterialSymbolsAnchor/MaterialSymbolsAnchor';
 
@@ -25,21 +26,28 @@ const ProjectPanel = ({
                     >{p}</p></li>
                 )}
             </ul>
-            <ul className={styles["link-buttons"]}>
-                <li><MaterialSymbolsAnchor
-                    href={params.pageUrl}
-                    ariaLabel="The project's page"
-                    text="open_in_new"
-                    sizeRem={2.4}
-                /></li>
-                <li><DeviconsAnchor
-                    href={params.githubUrl}
-                    ariaLabel="The project on github"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                    alt="github"
-                    sizeRem={2.4}
-                /></li>
-            </ul>
+            <div className={styles["technologies-and-links-container"]}>
+                <ul className={styles["technologies-list"]}>
+                    <TechnologyNameBox technologyID="html" />
+                    <TechnologyNameBox technologyID="css" />
+                    <TechnologyNameBox technologyID="javascript" />
+                </ul>
+                <ul className={styles["link-buttons"]}>
+                    <li><MaterialSymbolsAnchor
+                        href={params.pageUrl}
+                        ariaLabel="The project's page"
+                        text="open_in_new"
+                        sizeRem={2.4}
+                    /></li>
+                    <li><DeviconsAnchor
+                        href={params.githubUrl}
+                        ariaLabel="The project on github"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                        alt="github"
+                        sizeRem={2.4}
+                    /></li>
+                </ul>
+            </div>
         </div>
         </div>
     );

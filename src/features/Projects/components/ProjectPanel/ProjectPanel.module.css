@@ -80,14 +80,29 @@
     margin: 0rem;
 }
 
+.technologies-and-links-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.6rem;
+
+    border: 1px solid #000;
+}
+
+.technologies-list {
+    border: 1px solid #000;
+}
+
 .link-buttons {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: end;
     gap: 0.15rem;
 
     list-style: none;
 
-    padding: 0.2rem 0rem;
-    margin: 0rem 0.6rem;
+    padding: 0.2rem 0.6rem;
+    margin: 0rem;
+
+    border: 1px solid #000;
 }

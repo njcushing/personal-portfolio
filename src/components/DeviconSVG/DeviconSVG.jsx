@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import {
     allTechnologies,
-    getTechnologyDeviconInformation
+    getTechnologyInformation
 } from '../../utils/technologiesInformation';
 
 const DeviconSVG = ({
@@ -10,7 +10,7 @@ const DeviconSVG = ({
     scale,
     colour,
 }) => {
-    const iconInformation = getTechnologyDeviconInformation(technologyID);
+    const iconInformation = getTechnologyInformation(technologyID);
 
     return (
         <div

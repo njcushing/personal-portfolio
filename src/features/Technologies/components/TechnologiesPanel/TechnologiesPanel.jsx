@@ -3,7 +3,7 @@ import styles from './TechnologiesPanel.module.css';
 
 import {
     allTechnologies,
-    getTechnologyDeviconInformation,
+    getTechnologyInformation,
 } from '@/utils/technologiesInformation';
 
 import DeviconSVG from '@/components/DeviconSVG/DeviconSVG';
@@ -11,7 +11,7 @@ import DeviconSVG from '@/components/DeviconSVG/DeviconSVG';
 const TechnologiesPanel = ({
     technologyID,
 }) => {
-    const iconInformation = getTechnologyDeviconInformation(technologyID);
+    const iconInformation = getTechnologyInformation(technologyID);
 
     return (
         <div className={styles["wrapper"]}>

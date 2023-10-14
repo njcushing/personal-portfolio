@@ -58,7 +58,7 @@ const getCategoryName = (category) => {
            : "Category Not Found";
 }
 
-const getTechnologyDeviconInformation = (technologyID) => {
+const getTechnologyInformation = (technologyID) => {
     switch (technologyID) {
         /* Languages */
         case "html": return {
@@ -97,5 +97,5 @@ export {
     allTechnologies,
     validateTechnologies,
     getCategoryName,
-    getTechnologyDeviconInformation,
+    getTechnologyInformation,
 };
