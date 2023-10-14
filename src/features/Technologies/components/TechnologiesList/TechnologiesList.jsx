@@ -13,7 +13,9 @@ const TechnologiesList = ({
     category,
     technologies,
 }) => {
-    const reducedTechnologiesArray = validateTechnologies(category, technologies);
+    const reducedTechnologiesArray = validateTechnologies(
+        category, technologies, "TechnologiesList"
+    );
 
     return (
         <div className={styles["wrapper"]}>
