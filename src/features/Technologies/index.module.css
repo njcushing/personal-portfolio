@@ -15,8 +15,8 @@
 
 .categories-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-    column-gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    column-gap: 12px;
     justify-items: center;
 
     list-style: none;
@@ -25,4 +25,11 @@
     margin: 0rem;
 
     width: auto;
+}
+
+.categories-container > li {
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
 }

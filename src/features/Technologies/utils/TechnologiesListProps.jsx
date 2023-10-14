@@ -52,6 +52,12 @@ const validateTechnologies = (category, technologies) => {
     return reducedTechnologiesArray;
 }
 
+const getCategoryName = (category) => {
+    return   category in technologiesAssociations
+           ? technologiesAssociations[category].name
+           : "Category Not Found";
+}
+
 const getTechnologyDeviconInformation = (technologyID) => {
     switch (technologyID) {
         /* Languages */
@@ -90,5 +96,6 @@ export {
     technologiesCategories,
     allTechnologies,
     validateTechnologies,
+    getCategoryName,
     getTechnologyDeviconInformation,
 };

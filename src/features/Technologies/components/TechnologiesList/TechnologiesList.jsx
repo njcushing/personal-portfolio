@@ -4,6 +4,7 @@ import styles from './TechnologiesList.module.css';
 import {
     technologiesCategories,
     validateTechnologies,
+    getCategoryName,
 } from '../../utils/TechnologiesListProps';
 
 import TechnologiesPanel from './../TechnologiesPanel/TechnologiesPanel';
@@ -17,7 +18,7 @@ const TechnologiesList = ({
     return (
         <div className={styles["wrapper"]}>
         <div className={styles["container"]}>
-            <h3 className={styles["category-title"]}>{category}</h3>
+            <h3 className={styles["category-title"]}>{getCategoryName(category)}</h3>
             <ul className={styles["technologies-panels-container"]}>
                 {reducedTechnologiesArray.map((technology) =>
                     <li key={technology}>

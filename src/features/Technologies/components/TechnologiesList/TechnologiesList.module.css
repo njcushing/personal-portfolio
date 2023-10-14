@@ -2,17 +2,23 @@
     container-type: inline-size;
     
     width: 100%;
-    max-width: 320px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+
+    width: inherit;
 }
 
 .technologies-panels-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
     list-style: none;
 
+    width: inherit;
     padding: 0rem;
     margin: 0rem;
 }
