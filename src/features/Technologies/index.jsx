@@ -11,11 +11,11 @@ const Technologies = forwardRef(function Projects(props, ref) {
             <ul className={styles["categories-container"]}>
                 <li><TechnologiesList
                     category="languages"
-                    technologies={["html", "css"]}
+                    technologies={["html", "css", "javascript"]}
                 /></li>
                 <li><TechnologiesList
                     category="frontend"
-                    technologies={["javascript", "react"]}
+                    technologies={["react"]}
                 /></li>
                 <li><TechnologiesList
                     category="tools"
