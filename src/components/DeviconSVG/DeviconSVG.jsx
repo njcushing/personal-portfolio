@@ -4,7 +4,7 @@ import styles from './DeviconSVG.module.css';
 import {
     allTechnologies,
     getTechnologyDeviconInformation
-} from '../../utils/TechnologiesListProps';
+} from '../../features/Technologies/utils/TechnologiesListProps';
 
 const DeviconSVG = ({
     technologyID,

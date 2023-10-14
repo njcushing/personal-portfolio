@@ -6,7 +6,7 @@ import {
     getTechnologyDeviconInformation,
 } from '../../utils/TechnologiesListProps';
 
-import DeviconSVG from '../DeviconSVG/DeviconSVG';
+import DeviconSVG from '@/components/DeviconSVG/DeviconSVG';
 
 const TechnologiesPanel = ({
     technologyID,
