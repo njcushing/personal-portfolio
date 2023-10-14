@@ -8,13 +8,13 @@
 
 .container {
     display: grid;
-    grid-template-rows: 40% auto 1fr auto;
+    grid-template-rows: 144px auto 1fr auto;
     gap: 0.4rem;
 
     background-color: #fff;
     box-shadow: 0px 4px 5px -0px rgba(0, 0, 0, 0.3);
     
-    height: 360px;
+    height: 400px;
 
     overflow: hidden;
 
@@ -94,7 +94,7 @@
 
     list-style: none;
 
-    padding: 0.2rem 0.6rem;
+    padding: 0.6rem;
     margin: 0rem;
 }
 
@@ -106,6 +106,7 @@
 }
 
 .link-buttons {
+    align-self: end;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -114,6 +115,6 @@
 
     list-style: none;
 
-    padding: 0.2rem 0.6rem;
+    padding: 0.6rem;
     margin: 0rem;
 }

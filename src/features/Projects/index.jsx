@@ -30,7 +30,7 @@ const theOdinProjects = [
         ],
         imgSrc: toDoListThumbnail,
         imgAlt: "To-Do List application",
-        technologies: ["html", "css", "react"],
+        technologies: ["html", "css", "javascript"],
         pageUrl: "https://njcushing.github.io/odin-to-do-list/",
         githubUrl: "https://github.com/njcushing/odin-to-do-list",
     },
