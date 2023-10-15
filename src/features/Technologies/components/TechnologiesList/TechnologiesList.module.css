@@ -1,3 +1,17 @@
+@keyframes fade-in {
+    from {
+        opacity: 0%;
+        transform: translateY(0.5rem);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0rem);
+    }
+}
+.wrapper[animate="true"] .technologies-panels-container > * {
+    animation: 0.3s ease-in-out 0.15s 1 normal forwards fade-in;
+}
+
 .wrapper {
     container-type: inline-size;
     
