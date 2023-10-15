@@ -6,6 +6,7 @@ import ProjectPanelParams from './ProjectPanelParams';
 import { validateTechnologies } from '@/utils/technologiesInformation/technologiesInformation';
 
 import TechnologyNameBox from '@/components/TechnologyNameBox/TechnologyNameBox';
+import MaterialSymbolsIcon from '@/components/MaterialSymbolsIcon/MaterialSymbolsIcon';
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
 import MaterialSymbolsAnchor from '@/components/MaterialSymbolsAnchor/MaterialSymbolsAnchor';
 
@@ -32,7 +33,7 @@ const ProjectPanel = ({
                     >{p}</p></li>
                 )}
             </ul>
-            <div className={styles["technologies-and-links-container"]}>
+            <div className={styles["technologies-and-device-compatibility-icons-and-links-container"]}>
                 <ul
                     className={styles["technologies-list"]}
                     aria-label="Technologies Used"
@@ -44,6 +45,29 @@ const ProjectPanel = ({
                             />
                         </li>
                     )}
+                </ul>
+                <ul className={styles["device-compatibility-icons-container"]}>
+                    {params.desktopCompatible && 
+                        <li><MaterialSymbolsIcon
+                            ariaLabel="Desktop Compatible"
+                            text="computer"
+                            sizeRem={1.6}
+                        /></li>
+                    }
+                    {params.mobileCompatible && 
+                        <li><MaterialSymbolsIcon
+                            ariaLabel="Mobile Compatible"
+                            text="smartphone"
+                            sizeRem={1.6}
+                        /></li>
+                    }
+                    {params.tabletCompatible && 
+                        <li><MaterialSymbolsIcon
+                            aria-label="Tablet Compatible"
+                            text="tablet"
+                            sizeRem={1.6}
+                        /></li>
+                    }
                 </ul>
                 <ul className={styles["link-buttons"]}>
                     <li><MaterialSymbolsAnchor
