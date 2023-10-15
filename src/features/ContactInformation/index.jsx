@@ -2,7 +2,7 @@ import { useEffect, forwardRef } from 'react';
 import styles from './index.module.css';
 
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
-import animateInViewport from '@/utils/animateInViewport';
+import animateInViewport from '@/utils/animateInViewport/animateInViewport';
 
 const ContactInformation = forwardRef(function ContactInformation(props, ref) {
     useEffect(() => {

@@ -60,7 +60,7 @@ vi.mock('../../utils/findGridColumnCount', () => ({
 }));
 
 const mockScrollEventListener = vi.fn(() => {});
-vi.mock('@/utils/animateInViewport', () => ({
+vi.mock('@/utils/animateInViewport/animateInViewport', () => ({
     default: () => mockScrollEventListener,
 }));  
 

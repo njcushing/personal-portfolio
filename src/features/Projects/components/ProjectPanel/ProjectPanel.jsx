@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './ProjectPanel.module.css';
 
 import ProjectPanelParams from './ProjectPanelParams';
-import { validateTechnologies } from '@/utils/technologiesInformation';
+import { validateTechnologies } from '@/utils/technologiesInformation/technologiesInformation';
 
 import TechnologyNameBox from '@/components/TechnologyNameBox/TechnologyNameBox';
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';

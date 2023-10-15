@@ -4,7 +4,7 @@ import styles from './TechnologyPanel.module.css';
 import {
     allTechnologies,
     getTechnologyInformation,
-} from '@/utils/technologiesInformation';
+} from '@/utils/technologiesInformation/technologiesInformation';
 
 import DeviconSVG from '@/components/DeviconSVG/DeviconSVG';
 

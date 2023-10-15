@@ -5,7 +5,7 @@ import styles from './ProjectList.module.css';
 import ProjectPanelParams from '../ProjectPanel/ProjectPanelParams';
 
 import ProjectPanel from '../ProjectPanel/ProjectPanel';
-import animateInViewport from '@/utils/animateInViewport';
+import animateInViewport from '@/utils/animateInViewport/animateInViewport';
 import findGridColumnCount from '../../utils/findGridColumnCount';
 
 const ProjectList = ({

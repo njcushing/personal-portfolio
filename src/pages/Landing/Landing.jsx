@@ -7,7 +7,7 @@ import PersonalInformation from '@/features/PersonalInformation';
 import Projects from '@/features/Projects';
 import Technologies from '@/features/Technologies';
 import ContactInformation from '@/features/ContactInformation';
-import verticalScrollToElement from '@/utils/verticalScrollToElement';
+import verticalScrollToElement from '@/utils/verticalScrollToElement/verticalScrollToElement';
 
 const Landing = () => {
     const personalInformationWrapperRef = useRef(null);

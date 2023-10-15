@@ -19,14 +19,14 @@ vi.mock('./../TechnologyPanel/TechnologyPanel', () => ({
 }));
 
 const mockScrollEventListener = vi.fn(() => {});
-vi.mock('@/utils/animateInViewport', () => ({
+vi.mock('@/utils/animateInViewport/animateInViewport', () => ({
     default: () => mockScrollEventListener,
 }));
 
 const validateTechnologiesMock = vi.fn((category, technologies) => ["html", "css", "javascript"]);
 const getCategoryNameMock = vi.fn((category) => "Languages");
-vi.mock('@/utils/technologiesInformation', async () => { 
-    const actual = await vi.importActual("@/utils/technologiesInformation");
+vi.mock('@/utils/technologiesInformation/technologiesInformation', async () => { 
+    const actual = await vi.importActual("@/utils/technologiesInformation/technologiesInformation");
     return {
         ...actual,
         validateTechnologies: (

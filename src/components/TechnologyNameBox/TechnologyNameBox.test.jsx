@@ -28,8 +28,8 @@ const getTechnologyInformationMock = vi.fn((technologyID) => {
         }
     }
 });
-vi.mock('@/utils/technologiesInformation', async () => { 
-    const actual = await vi.importActual("@/utils/technologiesInformation");
+vi.mock('@/utils/technologiesInformation/technologiesInformation', async () => { 
+    const actual = await vi.importActual("@/utils/technologiesInformation/technologiesInformation");
     return {
         ...actual,
         getTechnologyInformation: (technologyID) => getTechnologyInformationMock(technologyID),

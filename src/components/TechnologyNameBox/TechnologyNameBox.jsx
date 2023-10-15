@@ -4,7 +4,7 @@ import styles from './TechnologyNameBox.module.css';
 import {
     allTechnologies,
     getTechnologyInformation,
-} from '@/utils/technologiesInformation.jsx';
+} from '@/utils/technologiesInformation/technologiesInformation';
 
 const TechnologyNameBox = ({
     technologyID,

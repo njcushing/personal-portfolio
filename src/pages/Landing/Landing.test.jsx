@@ -8,7 +8,7 @@ import { forwardRef } from 'react'
 import Landing from './Landing.jsx'
 
 import NavigationButton from '@/features/Navigation/components/NavigationButton/NavigationButton.jsx'
-import * as verticalScrollToElement from '@/utils/verticalScrollToElement.jsx'
+import * as verticalScrollToElement from '@/utils/verticalScrollToElement/verticalScrollToElement.jsx'
 
 
 const renderComponent = () => {
@@ -69,7 +69,7 @@ vi.mock('@/features/ContactInformation', () => ({
     }),
 }));
 
-vi.mock('@/utils/verticalScrollToElement', () => ({
+vi.mock('@/utils/verticalScrollToElement/verticalScrollToElement', () => ({
     default: () => {},
 }));
 

@@ -3,7 +3,7 @@ import styles from './index.module.css';
 
 import photo from '@/assets/NiallCushingPhoto.jpg';
 import DeviconsAnchor from '@/components/DeviconsAnchor/DeviconsAnchor';
-import animateInViewport from '@/utils/animateInViewport';
+import animateInViewport from '@/utils/animateInViewport/animateInViewport';
 
 const PersonalInformation = forwardRef(function PersonalInformation(props, ref) {
     useEffect(() => {

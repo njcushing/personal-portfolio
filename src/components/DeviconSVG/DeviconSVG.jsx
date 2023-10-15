@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
     allTechnologies,
     getTechnologyInformation
-} from '../../utils/technologiesInformation';
+} from '@/utils/technologiesInformation/technologiesInformation';
 
 const DeviconSVG = ({
     technologyID,

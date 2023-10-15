@@ -16,7 +16,7 @@ const renderComponent = () => {
 };
 
 const mockScrollEventListener = vi.fn(() => {});
-vi.mock('@/utils/animateInViewport', () => ({
+vi.mock('@/utils/animateInViewport/animateInViewport', () => ({
     default: () => mockScrollEventListener,
 }));
 

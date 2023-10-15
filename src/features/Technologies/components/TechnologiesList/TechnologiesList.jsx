@@ -2,13 +2,13 @@ import { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './TechnologiesList.module.css';
 
-import animateInViewport from '@/utils/animateInViewport';
+import animateInViewport from '@/utils/animateInViewport/animateInViewport';
 
 import {
     technologiesCategories,
     validateTechnologies,
     getCategoryName,
-} from '@/utils/technologiesInformation';
+} from '@/utils/technologiesInformation/technologiesInformation';
 
 import TechnologyPanel from '../TechnologyPanel/TechnologyPanel';
 
