@@ -7,15 +7,35 @@ import '@testing-library/jest-dom'
 import ProjectPanelParams from './ProjectPanelParams.jsx'
 import ProjectPanel from './ProjectPanel.jsx'
 
+const renderComponent = () => {
+    render(<ProjectPanel params={mockParams} />);
+};
+
 const mockParams = {
     ...ProjectPanelParams.defaultProps,
     name: "Test",
     desc: ["Paragraph 1", "Paragraph 2", "Paragraph 3"],
     imgSrc: "https://www.a.com/",
     imgAlt: "This is not an image",
+    technologies: ["html", "css", "javascript"],
     pageUrl: "https://www.b.com/",
     githubUrl: "https://www.c.com/",
 }
+
+vi.mock('./../TechnologyPanel/TechnologyPanel', () => ({ 
+    default: ({ technologyID }) => <div>{technologyID}</div>,
+}));
+
+const validateTechnologiesMock = vi.fn((category, technologies) => ["html", "css", "javascript"]);
+vi.mock('@/utils/technologiesInformation', async () => { 
+    const actual = await vi.importActual("@/utils/technologiesInformation");
+    return {
+        ...actual,
+        validateTechnologies: (
+            category, technologies
+        ) => validateTechnologiesMock(category, technologies),
+    };
+});
 
 vi.mock('@/components/MaterialSymbolsAnchor/MaterialSymbolsAnchor', () => ({ 
     default: ({ href }) => <a href={href} aria-label="page-link"></a>,
@@ -50,6 +70,22 @@ describe("UI/DOM Testing...", () => {
             expect(screen.getByText(/Paragraph 2/i).tagName).toBe("P");
             expect(screen.getByText(/Paragraph 3/i).tagName).toBe("P");
          });
+    });
+    describe("The list containing the technologies used...", () => {
+        test(`Should contain as many items as there are valid technologies
+         returned by the 'validateTechnologies' function`, () => {
+            validateTechnologiesMock.mockClear();
+            renderComponent();
+            const ele = screen.getByRole("list", { name: /Technologies Used/i });
+            expect(ele.children.length).toBe(3);
+        });
+        test(`Even if some are removed`, () => {
+            validateTechnologiesMock.mockClear();
+            validateTechnologiesMock.mockReturnValueOnce(["html", "css"]);
+            renderComponent();
+            const ele = screen.getByRole("list", { name: /Technologies Used/i });
+            expect(ele.children.length).toBe(2);
+        });
     });
     describe(`The MaterialSymbolsAnchor component that links to the project's
        page...`, () => {

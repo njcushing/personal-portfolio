@@ -30,7 +30,10 @@ const ProjectPanel = ({
                 )}
             </ul>
             <div className={styles["technologies-and-links-container"]}>
-                <ul className={styles["technologies-list"]}>
+                <ul
+                    className={styles["technologies-list"]}
+                    aria-label="Technologies Used"
+                >
                     {reducedTechnologiesArray.map((technology) =>
                         <li key={technology}>
                             <TechnologyNameBox
