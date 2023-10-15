@@ -41,16 +41,23 @@ const PersonalInformation = forwardRef(function PersonalInformation(props, ref) 
                 <h3 className={styles["about-me-title"]}>About Me</h3>
                 <ul className={styles["about-me-paragraph-list"]}>
                     <li><p className={styles["about-me-paragraph"]}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                        gravida lorem magna. Praesent ut tincidunt lectus.
+                        To whoever may be reading this: hello! I'm Niall, a
+                        university graduate from the United Kingdom with an
+                        interest in full-stack development. I have a passion for
+                        creating responsive, elegant, accessible applications.
                     </p></li>
                     <li><p className={styles["about-me-paragraph"]}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                        gravida lorem magna. Praesent ut tincidunt lectus.
+                        Although I have been writing code for many years as a
+                        hobby, I have since decided to pursue that hobby as a
+                        career.
                     </p></li>
                     <li><p className={styles["about-me-paragraph"]}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                        gravida lorem magna. Praesent ut tincidunt lectus.
+                        Since early 2023 I have been working through The
+                        Odin Project; an online course that has allowed me to
+                        develop a deep understanding of many web-based
+                        technologies and other industry-standard tools, such
+                        as HTML, CSS, JavaScript and the React framework; all of
+                        which I am using today.
                     </p></li>
                 </ul>
             </div>

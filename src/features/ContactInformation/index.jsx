@@ -11,6 +11,22 @@ const ContactInformation = forwardRef(function ContactInformation(props, ref) {
         return () => window.removeEventListener("scroll", eventListener);
     }, [ref]);
 
+    const contactInfo = (
+        /*
+        <ul className={styles["contact-me-additional"]}>
+            <li>
+                <h4 className={styles["contact-me-additional-item-heading"]}>
+                    Email:
+                </h4>
+                <p className={styles["contact-me-additional-item-text"]}>
+                    xxxxx@gmail.com
+                </p>
+            </li>
+        </ul>
+        */
+        null
+    )
+
     return (
         <div className={styles["wrapper"]} ref={ref}>
         <nav className={styles["container"]}>
@@ -33,24 +49,7 @@ const ContactInformation = forwardRef(function ContactInformation(props, ref) {
                             sizeRem={2.4}
                         /></li>
                     </ul>
-                    <ul className={styles["contact-me-additional"]}>
-                        <li>
-                            <h4 className={styles["contact-me-additional-item-heading"]}>
-                                Email:
-                            </h4>
-                            <p className={styles["contact-me-additional-item-text"]}>
-                                fakeemail@gmail.com
-                            </p>
-                        </li>
-                        <li>
-                            <h4 className={styles["contact-me-additional-item-heading"]}>
-                                Phone:
-                            </h4>
-                            <p className={styles["contact-me-additional-item-text"]}>
-                                +44 9999 999999
-                            </p>
-                        </li>
-                    </ul>
+                    {contactInfo}
                 </div>
             </div>
         </nav>
