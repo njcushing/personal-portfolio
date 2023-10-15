@@ -24,7 +24,10 @@ const DeviconSVG = ({
                 height={scale * 24}
                 fill={colour}
                 viewBox="0 0 128 128"
-            >{iconInformation.svg}</svg>
+                aria-labelledby="title"
+            >{iconInformation.svg}
+            <desc>{iconInformation.name}</desc>
+            </svg>
         </div>
     )
 }
