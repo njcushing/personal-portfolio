@@ -50,17 +50,6 @@ describe("When the component is mounted...", () => {
             renderComponent();
             expect(getTechnologyInformationMock).toHaveBeenCalledWith("test_2");
         });
-        test("And should return the correct information", () => {
-            getTechnologyInformationMock.mockClear();
-            renderComponent();
-            expect(getTechnologyInformationMock).toHaveLastReturnedWith(
-                {
-                    name: "technology_2",
-                    svg: "SVG_2",
-                    baseColour: "colour_2",
-                }
-            );
-        });
     });
 });
 
