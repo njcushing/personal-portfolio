@@ -19,6 +19,7 @@ vi.mock('@/features/Navigation', () => ({
     default: ({
         personalInformationOnClickHandler,
         projectsOnClickHandler,
+        technologiesOnClickHandler,
         contactInformationOnClickHandler,
     }) => {
         return (
@@ -30,6 +31,10 @@ vi.mock('@/features/Navigation', () => ({
                 <li><NavigationButton
                     text="My Projects"
                     onClickHandler={projectsOnClickHandler}
+                /></li>
+                <li><NavigationButton
+                    text="Technologies"
+                    onClickHandler={technologiesOnClickHandler}
                 /></li>
                 <li><NavigationButton
                     text="Contact Me"
@@ -52,6 +57,12 @@ vi.mock('@/features/Projects', () => ({
     }),
 }));
 
+vi.mock('@/features/Technologies', () => ({
+    default: forwardRef(function Projects(props, ref) {
+        return <div ref={ref}>Technologies</div>;
+    }),
+}));
+
 vi.mock('@/features/ContactInformation', () => ({
     default: forwardRef(function ContactInformation(props, ref) {
         return <div ref={ref}>Contact Information</div>;
@@ -71,13 +82,15 @@ describe("UI/DOM Testing...", () => {
 
             const aboutMeButton = screen.getByRole("link", { name: /About Me/i });
             const myProjectsButton = screen.getByRole("link", { name: /My Projects/i });
+            const technologiesButton = screen.getByRole("link", { name: /Technologies/i });
             const contactMeButton = screen.getByRole("link", { name: /Contact Me/i });
 
             await user.click(aboutMeButton);
             await user.click(myProjectsButton);
+            await user.click(technologiesButton);
             await user.click(contactMeButton);
 
-            expect(spy).toHaveBeenCalledTimes(3);
+            expect(spy).toHaveBeenCalledTimes(4);
         })
     });
 });
