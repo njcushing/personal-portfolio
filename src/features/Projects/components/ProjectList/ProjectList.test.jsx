@@ -62,18 +62,7 @@ vi.mock('../../utils/findGridColumnCount', () => ({
 const mockScrollEventListener = vi.fn(() => {});
 vi.mock('@/utils/animateInViewport', () => ({
     default: () => mockScrollEventListener,
-}));
-
-/*
-vi.mock("react", async () => {
-    const actual = await vi.importActual("react")
-    return {
-        ...actual,
-        useState: () => [2, () => {}],
-    }
-});
-*/
-  
+}));  
 
 describe("UI/DOM Testing...", () => {
     describe("The window element...", () => {
