@@ -63,3 +63,12 @@ describe("When the component is mounted...", () => {
         });
     });
 });
+describe("UI/DOM Testing...", () => {
+    describe("The heading element that displays the technology's name...", () => {
+        test(`Should display the value of the 'name' property returned by the
+         getTechnologyInformation function`, () => {
+            renderComponent();
+            expect(screen.getByRole("heading", { name: "technology_2", })).toBeInTheDocument();
+        });
+    });
+});
