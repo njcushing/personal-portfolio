@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProjectPanel.module.css';
 
@@ -11,7 +12,9 @@ import MaterialSymbolsAnchor from '@/components/MaterialSymbolsAnchor/MaterialSy
 const ProjectPanel = ({
     params,
 }) => {
-    const reducedTechnologiesArray = validateTechnologies(null, params.technologies);
+    const reducedTechnologiesArray = useMemo(() => {
+        return validateTechnologies(null, params.technologies);
+    }, [params.technologies]);
 
     return (
         <div className={styles["wrapper"]}>

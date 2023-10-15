@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import styles from './TechnologiesList.module.css';
 
@@ -18,9 +18,11 @@ const TechnologiesList = ({
 }) => {
     const wrapperRef = useRef(null);
 
-    const reducedTechnologiesArray = validateTechnologies(
-        category, technologies, "TechnologiesList"
-    );
+    const reducedTechnologiesArray = useMemo(() => {
+        return validateTechnologies(
+            category, technologies, "TechnologiesList"
+        );
+    }, [category, technologies]);
 
     useEffect(() => {
         const eventListener = animateInViewport(wrapperRef.current);
