@@ -1,0 +1,29 @@
+.MaterialSymbolsIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    border: 0.15rem solid transparent;
+    border-radius: 0.2rem;
+    outline: none;
+    text-decoration: none;
+
+    transition: border 0.24s ease-in-out 0s;
+
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.material-symbols-rounded {
+    transition: transform 0.24s ease-in-out 0s;
+
+    /* To prevent cursor highlighting of the icon */
+    -webkit-touch-callout: none;    /* iOS Safari */
+        -webkit-user-select: none;      /* Safari */
+        -khtml-user-select: none;       /* Konqueror HTML */
+        -moz-user-select: none;         /* Old versions of Firefox */
+        -ms-user-select: none;          /* Internet Explorer/Edge */
+        user-select: none;              /* Non-prefixed version, currently
+                                           supported by Chrome, Edge, Opera and Firefox */
+} 
