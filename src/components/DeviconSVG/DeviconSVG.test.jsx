@@ -39,7 +39,7 @@ vi.mock('@/utils/technologiesInformation', async () => {
             I'm returning "test_2" as a valid 'technologyID' prop value to
             prevent console errors for the sake of testing.
         */
-        allTechnologies: (technologyID) => ["test_2"],
+        allTechnologies: () => ["test_2"],
     };
 });
 
