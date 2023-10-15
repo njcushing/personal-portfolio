@@ -36,3 +36,7 @@
     padding: 0rem;
     margin: 0rem;
 }
+
+.technologies-panels-container > li {
+    opacity: 0%;
+}
