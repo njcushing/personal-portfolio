@@ -33,6 +33,13 @@ vi.mock('@/utils/technologiesInformation', async () => {
     return {
         ...actual,
         getTechnologyInformation: (technologyID) => getTechnologyInformationMock(technologyID),
+        
+        /*
+            This function is used to validate propTypes within the component, so
+            I'm returning "test_2" as a valid 'technologyID' prop value to
+            prevent console errors for the sake of testing.
+        */
+        allTechnologies: (technologyID) => ["test_2"],
     };
 });
 
