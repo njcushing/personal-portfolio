@@ -7,8 +7,6 @@ import '@testing-library/jest-dom'
 import * as React from 'react';
 import DeviconSVG from './DeviconSVG.jsx'
 
-import * as technologiesInformation from '@/utils/technologiesInformation.jsx';
-
 const renderComponent = () => { render(<DeviconSVG technologyID="test_2" />); };
 
 const getTechnologyInformationMock = vi.fn((technologyID) => {
